@@ -5,8 +5,8 @@ const { AuthenticationError } = require("apollo-server-express");
 const resolvers = {
   Query: {
     // Find a user based upon user Id
-    users: async (parent, { userId }) => {
-      return User.findOne({ _id: userId, username, password });
+    users: async (parent, { userId  }) => {
+      return User.findbyId({ _id }).populate('monsters');
     },
     monsters: async (parent, { username }) => {
       const params = username ? { username } : {};
@@ -41,12 +41,6 @@ const resolvers = {
       // If they successfully login, they're issued a JWT
       const token = signToken(user);
 
-      return { token, user };
-    },
-
-    addUser: async (parent, { username, password }) => {
-      const user = await User.create({ username, password });
-      const token = signToken(user);
       return { token, user };
     },
 
