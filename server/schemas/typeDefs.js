@@ -9,9 +9,10 @@ type User {
 }
 type Monster {
     _id: ID!,
-    fullName: String,
+    fullName: String!,
     createdAt: String!,
-    userId: User
+    imageUrl: String!
+    # userId: User
 }
 type Auth {
     token: ID
@@ -28,7 +29,7 @@ type Mutation {
         username: String!
         password: String!
         ) : Auth
-    addMonster(monsters: ID!) : User
+    addMonster(fullName: String!, userId: ID, imageUrl: String!) : Monster
     updateMonster(
         fullName: String
     ) : Monster

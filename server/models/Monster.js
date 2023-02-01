@@ -10,10 +10,15 @@ const monsterSchema = new Schema({
         required: true,
         default: Date.now,
     },
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
+    imageUrl: {
+        type: String,
+        trim: true,
+        required: true
     }
+    // userId: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    // }
 });
 
 const Monster = model('Monster', monsterSchema);
