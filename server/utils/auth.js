@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-console.log(process.env)
 // const secret = process.env.SECRET;
 const secret = 'TAMAGOTCHI';
 const expiration = '2h';
