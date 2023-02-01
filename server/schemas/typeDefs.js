@@ -22,7 +22,7 @@ type Query {
     monsters(userId: ID): [Monster]
     monster(_id: ID!): Monster
     users:[User]
-    user: User
+    user(_id: ID!): User
 }
 type Mutation {
     addUser(

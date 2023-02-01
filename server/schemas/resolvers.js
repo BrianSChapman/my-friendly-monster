@@ -5,12 +5,12 @@ const { AuthenticationError } = require("apollo-server-express");
 const resolvers = {
   Query: {
     // Find a user based upon user Id
-    users: async (parent, { userId  }) => {
-      return User.findbyId({ _id }).populate('monsters');
+    user: async (parent, { _id }) => {
+      return await User.findById({ _id }).populate('monsters');
     },
     monsters: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Monster.find(params).sort({ createdAt: -1 })
+      return await Monster.find(params).sort({ createdAt: -1 })
     }
   },
 
