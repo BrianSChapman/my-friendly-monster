@@ -6,7 +6,7 @@ export const LOGIN_USER = gql`
       token
       user {
         _id
-        user
+        username
       }
     }
   }
@@ -23,20 +23,20 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_MONSTER = gql `
-mutation addMonster($fullName: String!, userId: ID, imageUrl: String!) {
-  addMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
-}
-`;
-export const UPDATE_MONSTER = gql`
-mutation updateMonster($fullName: String!, monsterId: String!) {
-  updateMonster(fullName: $fullName, monsterId: $ID)
-}
-`;
+// export const ADD_MONSTER = gql `
+// mutation addMonster($fullName: String!, userId: ID, imageUrl: String!) {
+//   addMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
+// }
+// `;
+// export const UPDATE_MONSTER = gql`
+// mutation updateMonster($fullName: String!, monsterId: String!) {
+//   updateMonster(fullName: $fullName, monsterId: $ID)
+// }
+// `;
 
-export const REMOVE_MONSTER = gql`
-mutation removeMonster($fullName: String!, monsterID: String!, imageUrl: string!) {
-  removeMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
-}
-`;
+// export const REMOVE_MONSTER = gql`
+// mutation removeMonster($fullName: String!, monsterID: String!, imageUrl: string!) {
+//   removeMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
+// }
+// `;
 
