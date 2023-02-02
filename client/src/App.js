@@ -12,7 +12,6 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import HomeContainer from "./pages/HomeContainer";
 import Header from "./components/Header";
-import Dashboard from "./pages/Dashboard"
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
