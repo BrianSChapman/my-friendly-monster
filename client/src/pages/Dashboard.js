@@ -8,7 +8,6 @@ import Auth from '../utils/auth'
 export default function Dashboard() {
     const tokenTest = Auth.getProfile();
     const userId = tokenTest.data._id;
-    console.log(userId);
     const { loading, error, data } = useQuery(QUERY_SINGLE_USER, {
         variables: {_id: userId},
     });
