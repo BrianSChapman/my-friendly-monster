@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+
 function Login(props) {
   const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
+  const navigate = useNavigate();
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -13,7 +15,8 @@ function Login(props) {
         variables: { username: formState.username, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.login(token);
+      Auth.loggedIn(token);
+      navigate("/dashboard", {replace: true, state: {login} });
     } catch (e) {
       console.log(e);
     }
