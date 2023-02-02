@@ -17,13 +17,14 @@ const resolvers = {
   Mutation: {
     // Add a user and assign them a JWT
     addUser: async (parent, { username, password }) => {
-      const user = await user.create({ username, password });
+      const user = await User.create({ username, password });
       const token = signToken(user);
       return { token, user };
     },
     //   Login a user
     login: async (parent, { username, password }) => {
-      const user = await user.findOne({ username });
+      console.log("I GOT HERE");
+      const user = await User.findOne({ username });
       // checking if the username is valid & throwing an error if not
       if (!user) {
         throw new AuthenticationError(
@@ -40,7 +41,10 @@ const resolvers = {
       }
       // If they successfully login, they're issued a JWT
       const token = signToken(user);
-
+      console.log("PING");
+      console.log(token);
+      console.log(user);
+      console.log("PING");
       return { token, user };
     },
 

@@ -4,7 +4,7 @@ const typeDefs = gql`
 type User {
     _id: ID!
     username: String!,
-    password: String!,
+    password: String,
     monsters: [Monster]
 }
 type Monster {
@@ -19,7 +19,7 @@ type Auth {
     user: User
 }
 type Query {
-    monsters(userId: ID): [Monster]
+    monsters(userId: ID!): [Monster]
     monster(_id: ID!): Monster
     users:[User]
     user(_id: ID!): User
