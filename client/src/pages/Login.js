@@ -16,7 +16,7 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.loggedIn(token);
-      navigate("/dashboard", {replace: true, state: {login} });
+      navigate("/dashboard");
     } catch (e) {
       console.log(e);
     }
