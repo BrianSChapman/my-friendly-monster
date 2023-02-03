@@ -110,6 +110,8 @@ footer {
 .mon-btns {
   border-color: aquamarine;
   border-radius: 60%;
+  border-width: 6px;
+  border-style: solid;
   width: 600px;
   height: 200px;
   font-family: 'Black Han Sans', sans-serif;
