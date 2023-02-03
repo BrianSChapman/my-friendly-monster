@@ -40,8 +40,24 @@ export const ADD_MONSTER = gql`
 // `;
 
 // export const REMOVE_MONSTER = gql`
-// mutation removeMonster($fullName: String!, monsterID: String!, imageUrl: string!) {
-//   removeMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
-// }
+// mutation removeMonster($monster: ID!, $userId: ID!) {
+//   removeMonster(monster: $monster, userId: $userId) {
+//     _id
+//     monsters {
+//       _id
+//     }
+//   }
+//   }
 // `;
-
+export const REMOVE_MONSTER = gql`
+mutation removeMonster($userId: ID!, $monster: ID!) {
+  removeMonster(userId: $userId, monsterId: $monsterId) {
+    id
+    monsters {
+      id
+      fullName
+      imageUrl
+    }
+  }
+}
+`;

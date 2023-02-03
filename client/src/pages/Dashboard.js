@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
+import { REMOVE_MONSTER } from "../utils/mutations"
+import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import beety from "./assets/beety.gif";
 import ben from "./assets/ben.gif";
@@ -17,6 +19,21 @@ export default function Dashboard() {
     variables: { _id: userId },
   });
   const monsters = data?.user.monsters || [];
+  const [removeMonster, { removeError }] = useMutation(REMOVE_MONSTER);
+
+  const RemoveMonster = (monsterId, userId) => {
+    console.log(monsterId);
+    try {
+      removeMonster({
+      variables: {
+        monsterId: monsterId,
+        userId: userId
+      },
+    });
+  } catch (removeError) {
+    console.log(removeError);
+  }
+  }
 
   const newMonster = (monster) => {
 
@@ -50,6 +67,7 @@ export default function Dashboard() {
       {/* make a list of all monsters belonging to user */}
       {monsters.map((monster) => (
         <div key={monster._id} className="card mb-3">
+          <Link to={`/monsterpage/${monster._id}`}>
           <h4 className="card-header bg-primary text-light p-2 m-0">
             {monster.fullName} <br />
             <span style={{ fontSize: "1rem" }}>
@@ -61,6 +79,9 @@ export default function Dashboard() {
               src={() => {newMonster(monster.imageUrl)}}
               alt="Monster Artwork"/>
           </div>
+          </Link>
+          <button
+            onClick={() => {RemoveMonster(monster._id, userId)}}>Rehome</button>
         </div>
       ))}
 

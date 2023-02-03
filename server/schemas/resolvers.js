@@ -48,20 +48,20 @@ const resolvers = {
       return { token, user };
     },
 
-    addMonster: async (parent, { fullName, userId, imageUrl }, context ) => {
+    addMonster: async (parent, { fullName, userId, imageUrl }, context) => {
       // if (context.user) {
-        const monster = await Monster.create({
-          fullName,
-          imageUrl
-        });
+      const monster = await Monster.create({
+        fullName,
+        imageUrl
+      });
 
-        await User.findOneAndUpdate(
-          // { _id: context.user._id },
-          { _id: userId },
-          { $addToSet: { monsters: monster._id } }
-        );
+      await User.findOneAndUpdate(
+        // { _id: context.user._id },
+        { _id: userId },
+        { $addToSet: { monsters: monster._id } }
+      );
 
-        return monster;
+      return monster;
       // }
       // throw new AuthenticationError('You need to be logged in!');
       return await Monster.create({ fullName, userId });
@@ -75,19 +75,34 @@ const resolvers = {
       );
     },
     //  Might need a second opinion on this one in particular)
-    removeMonster: async (parent, { monsterId }, context) => {
-      if (context.user) {
-        const monster = await Monster.findOneAndDelete({
-          _id: monsterId,
-        });
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { monster: monster._id } }
-        );
-        return monster;
-      }
+    // removeMonster: async (parent, { monsterId, userId }, context) => {
+    //     // const monster = await Monster.findOneAndDelete({
+    //     //   _id: monsterId,
+    //     // });
+    //     console.log(monsterId);
+    //     console.log(userId);
+    //     const monster = await User.findOneAndUpdate(
+    //       { _id: userId },
+    //       { $pull: { monsters: {_id: monsterId } }}
+    //     );
+    //     return monster;
+    //   }
+    // }
+
+    removeMonster: async (parent, { monsterId, userId }, context) => {
+      const updatedUser = await User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { monsters: { _id: monsterId } } },
+        { new: true }
+      );
+
+      // if (!updatedUser) {
+      // throw new Error(User with id ${userId} not found);
+      // }
+
+      return updatedUser;
     }
   }
-};
+  };
 
-module.exports = resolvers;
+  module.exports = resolvers;
