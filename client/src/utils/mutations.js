@@ -24,8 +24,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_MONSTER = gql`
-  mutation addMonster( $_id: ID!, $fullName: String!, $imageUrl: String!) {
-    addMonster(fullName: $fullName, imageUrl: $imageUrl) {
+  mutation addMonster($fullName: String!, $imageUrl: String!, $userId: ID!) {
+    addMonster(fullName: $fullName, imageUrl: $imageUrl, userId: $userId) {
       _id
       fullName
       createdAt
