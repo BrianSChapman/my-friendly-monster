@@ -1,17 +1,33 @@
+:root {
+  /* Bright Colors */
+  --pink: #F72585;
+  --purple: #7209B7;
+  --indigo: #3A0CA3;
+  --blue: #4361EE;
+  --lightblue: #4CC9F0;
+  /* Pastel Colors */
+  --pastelpurple: #CDB4DB;
+  --pastellightpink: #FFC8DD;
+  --pastelpink: #FFAFCC;
+  --custompink: rgb(223, 156, 213);
+  --pastellightblue: #BDE0FE;
+  --pastelblue: #A2D2FF;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: rgb(223, 156, 213);
-  color: rgb(58, 12, 163);
+  background-color: var(--custompink);
+  color: var(--indigo);
   font-family: 'Black Han Sans', sans-serif;
-  border-bottom: 2px dashed rgb(58, 12, 163);
+  border-bottom: 2px dashed var(--indigo);
 }
 
 a, .nav-link {
-  color: rgb(58, 12, 163);
+  color: var(--indigo);
   text-decoration: none;
 }
 
@@ -30,8 +46,8 @@ footer {
   left:0;
   width:100%;
   height:90px;
-  background-color: rgb(58, 12, 163);
-  border-top: 2px dashed rgb(223, 156, 213)
+  background-color: var(--indigo);
+  border-top: 2px dashed var(--custompink)
 }
 
 
@@ -93,4 +109,25 @@ align-items: center;
 
 .signup-btn{
   margin-top: 10px;
+}
+
+/* Dashboard */
+.cardContainer {
+
+}
+.card {
+  width: 18rem !important;
+}
+.dashImg {
+  width: 100%;
+  height: 15vw;
+  object-fit:contain;
+}
+.card-header {
+  background-color: var(--pink) !important;
+}
+.rehomeBtn {
+  background-color: #CDB4DB;
+  color:#7209B7;
+  border:2px #7209B7 solid;
 }
