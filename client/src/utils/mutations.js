@@ -23,11 +23,16 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const ADD_MONSTER = gql `
-// mutation addMonster($fullName: String!, userId: ID, imageUrl: String!) {
-//   addMonster(fullName: $fullName, userId: $ID, imageUrl: $imageUrl)
-// }
-// `;
+export const ADD_MONSTER = gql`
+  mutation addMonster( $_id: ID!, $fullName: String!, $imageUrl: String!) {
+    addMonster(fullName: $fullName, imageUrl: $imageUrl) {
+      _id
+      fullName
+      createdAt
+      imageUrl
+      }
+    }
+`;
 // export const UPDATE_MONSTER = gql`
 // mutation updateMonster($fullName: String!, monsterId: String!) {
 //   updateMonster(fullName: $fullName, monsterId: $ID)
