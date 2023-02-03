@@ -21,8 +21,7 @@ const EggPage = () => {
     'ben',
     'beety',
 ];
-  const randomMonster =
-    monsterArray[Math.floor(monsterArray.length * Math.random())];
+  const randomMonster = monsterArray[Math.floor(monsterArray.length * Math.random())];
   const [nameState, setNameState] = useState("My Monster");
   console.log(nameState);
   const [imgState, setImgState] = useState(randomMonster);
