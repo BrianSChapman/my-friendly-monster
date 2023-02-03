@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { ADD_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import egg from "./assets/zh3j4qF.gif";
-import beety from './assets/beety.gif';
-import ben from './assets/ben.gif';
-import frower from './assets/frower.gif';
-import iceabella from './assets/iceabella.gif';
-import volma from './assets/volma.gif';
-import wavy from './assets/wavy.gif';
+// import beety from './assets/beety.gif';
+// import ben from './assets/ben.gif';
+// import frower from './assets/frower.gif';
+// import iceabella from './assets/iceabella.gif';
+// import volma from './assets/volma.gif';
+// import wavy from './assets/wavy.gif';
 import Auth from '../utils/auth';
 
 const EggPage = () => {

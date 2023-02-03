@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // const secret = process.env.SECRET;
 const secret = 'TAMAGOTCHI';
-const expiration = '2h';
+const expiration = '6h';
 
 module.exports = {
   signToken: function ({ username, password, _id }) {
