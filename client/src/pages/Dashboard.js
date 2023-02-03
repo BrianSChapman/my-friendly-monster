@@ -76,7 +76,7 @@ export default function Dashboard() {
       {monsters.map((monster) => (
         <div key={monster._id} className="card mb-3">
           <Link
-            to="/monsterpage"
+            to={`/monsterpage/${monster._id}`}
           >
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {monster.fullName} <br />
