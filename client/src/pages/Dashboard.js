@@ -72,25 +72,24 @@ export default function Dashboard() {
   return (
     <div>
       <h1>THIS IS DASHBOARD</h1>
-      {/* make a list of all monsters belonging to user */}
+      <div class="container-fluid d-flex p-5 flex-wrap mt-6">
       {monsters.map((monster) => (
-        <div key={monster._id} className="card mb-3">
+        <div key={monster._id} className="card mb-3 p-2 border-0">
           <Link
             to={`/monsterpage/${monster._id}`}
           >
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+            <h4 className="card-header text-light p-2 m-0">
               {monster.fullName} <br />
-              <span style={{ fontSize: "1rem" }}>
-                had this thought on {monster.createdAt}
-              </span>
             </h4>
             <div className="card-body bg-light p-2">
               <img
                 src={`${newMonster(monster.imageUrl)}`}
-                alt="Monster Artwork" />
+                alt="Monster Artwork"
+                className="dashImg"/>
             </div>
           </Link>
           <button
+            className="rehomeBtn rounded"
             onClick={() => { RemoveMonster(monster._id, userId) }}>Rehome</button>
         </div>
       ))}
@@ -98,6 +97,7 @@ export default function Dashboard() {
       <Link to={"/eggpage"}>
         <button>Create Monster</button>{" "}
       </Link>
+      </div>
     </div>
   );
 }
