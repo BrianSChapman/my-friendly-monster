@@ -50,12 +50,6 @@ footer {
   border-top: 2px dashed var(--custompink)
 }
 
-
-.login-container, .signup-card{
-  padding: 20px !important;
-  width: 280px;
-}
-
 .background-color{
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
@@ -63,7 +57,7 @@ footer {
 
 .login-screen, .signup-screen{
 align-items: center;
-
+height: fit-content;
 }
 
 .login-image{
@@ -84,22 +78,12 @@ align-items: center;
 .login-container, .signup-card{
   padding: 20px !important;
   width: 280px;
+  background-color: #A2D2FF;
 }
 
 .background-color{
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
-}
-
-.login-screen, .signup-screen{
-align-items: center;
-
-}
-
-.login-image{
-  height: 100%;
-  width:400px;
-  padding: 20px;
 }
 
 .login-submit-btn{

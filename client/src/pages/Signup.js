@@ -41,7 +41,7 @@ const Signup = () => {
   return (
     <main className="align-items-center flex-row justify-center mb-4 justify-content-center">
       <div className="signup-screen d-flex flex-column">
-        <div className="signup-card  bg-info my-1 border border-primary rounded">
+        <div className="signup-card my-1 border border-primary rounded">
         <Link to="/">← Go back to login</Link>
         <h2>Sign Up</h2>
           <div className="card-body flex-row space-between my-2">

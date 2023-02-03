@@ -31,7 +31,7 @@ function Login(props) {
   };
   return (
     <div className='login-screen justify-content-center d-flex flex-column' >
-    <div className="login-container bg-info p-1 my-1 border border-primary rounded" id="login-box">
+    <div className="login-container p-1 my-1 border border-primary rounded" id="login-box">
       <Link to="/signup">← Go to Signup</Link>
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
