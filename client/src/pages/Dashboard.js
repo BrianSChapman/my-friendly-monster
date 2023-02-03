@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { QUERY_SINGLE_USER } from '../utils/queries'
 import { useQuery } from '@apollo/client'
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Auth from '../utils/auth'
 
 
@@ -12,6 +12,8 @@ export default function Dashboard() {
     variables: { _id: userId },
   });
   const monsters = data?.user.monsters || [];
+
+
 
   return (
     <div>
@@ -29,7 +31,9 @@ export default function Dashboard() {
             <p>{monster.imageUrl}</p>
           </div>
         </div>))}
+        
+        <Link to={"/eggpage"}><button>Create Monster</button> </Link>
     </div>
-    // create monster button
+
   );
 }
