@@ -13,7 +13,9 @@ import Dashboard from "./pages/Dashboard";
 import HomeContainer from "./pages/HomeContainer";
 import Header from "./components/Header";
 import EggPage from "./pages/EggPage";
-import MonsterPage from "./pages/MonsterPage"
+import MonsterPage from "./pages/MonsterPage";
+import Footer from "../src/components/Footer";
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -49,6 +51,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Footer />
     </ApolloProvider>
   );
 }

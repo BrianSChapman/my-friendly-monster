@@ -1,22 +1,21 @@
 import React from "react";
+import Auth from '../utils/auth';
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg shadow-lg">
       <div className="container-fluid">
-      <h1 className="title justify-content-center">My Friendly Monsters</h1>
+      <h1 className="title text-center">My Friendly Monster</h1>
         <ul className="nav justify-content-end">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+            <a className="nav-link active hidden" aria-current="page" href="#">
               Create Monster
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link hidden" href="#">
               Logout
             </a>
-            <div className="navbar">
-            </div>
           </li>
         </ul>
       </div>
