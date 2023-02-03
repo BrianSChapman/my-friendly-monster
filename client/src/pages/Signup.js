@@ -41,7 +41,8 @@ const Signup = () => {
   return (
     <main className="align-items-center flex-row justify-center mb-4 justify-content-center">
       <div className="signup-screen d-flex flex-column">
-        <div className="signup-card  bg-info p-1 my-1 border border-primary rounded">
+        <div className="signup-card  bg-info my-1 border border-primary rounded">
+        <Link to="/">← Go back to login</Link>
         <h2>Sign Up</h2>
           <div className="card-body flex-row space-between my-2">
             {data ? (
@@ -53,8 +54,8 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <label htmlFor="username">Username:</label>
                 <input
-                  className="form-input"
-                  placeholder="Your username"
+                  className="form-input space-between my-2"
+                  placeholder="username"
                   name="username"
                   type="text"
                   value={formState.name}
@@ -62,7 +63,7 @@ const Signup = () => {
                 />
                 <label htmlFor="pwd">Password:</label>
                 <input
-                  className="form-input"
+                  className="form-input space-between"
                   placeholder="******"
                   name="password"
                   type="password"
