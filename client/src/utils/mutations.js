@@ -50,7 +50,7 @@ export const ADD_MONSTER = gql`
 //   }
 // `;
 export const REMOVE_MONSTER = gql`
-mutation removeMonster($userId: ID!, $monster: ID!) {
+mutation removeMonster($userId: ID!, $monsterId: ID!) {
   removeMonster(userId: $userId, monsterId: $monsterId) {
     id
     monsters {

@@ -95,7 +95,9 @@ const resolvers = {
         { $pull: { monsters: { _id: monsterId } } },
         { new: true }
       );
-
+        console.log(updatedUser);
+        console.log(monsterId);
+        console.log(userId);
       // if (!updatedUser) {
       // throw new Error(User with id ${userId} not found);
       // }
