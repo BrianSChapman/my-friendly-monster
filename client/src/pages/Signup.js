@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
+import ben from './assets/ben.gif';
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -39,11 +39,11 @@ const Signup = () => {
 
 //    Need to Style this part 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main className="align-items-center flex-row justify-center mb-4 justify-content-center">
+      <div className="signup-screen d-flex flex-column">
+        <div className="signup-card  bg-info p-1 my-1 border border-primary rounded">
+        <h2>Sign Up</h2>
+          <div className="card-body flex-row space-between my-2">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -51,6 +51,7 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <label htmlFor="username">Username:</label>
                 <input
                   className="form-input"
                   placeholder="Your username"
@@ -59,6 +60,7 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
+                <label htmlFor="pwd">Password:</label>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -68,7 +70,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="signup-btn btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -84,6 +86,9 @@ const Signup = () => {
             )}
           </div>
         </div>
+        <div>
+      <img className="login-image" src={ben} alt="ben"/>
+    </div>
       </div>
     </main>
   );

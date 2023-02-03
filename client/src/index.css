@@ -35,6 +35,62 @@ footer {
 }
 
 
+.login-container, .signup-card{
+  padding: 20px !important;
+  width: 280px;
+}
 
+.background-color{
+  background-image: url("./pages/assets/background.jpg");
+  background-color: #cccccc;
+}
 
+.login-screen, .signup-screen{
+align-items: center;
 
+}
+
+.login-image{
+  height: 100%;
+  width:400px;
+  padding: 20px;
+}
+
+.login-submit-btn{
+  border: solid black 1px;
+  background-color: aquamarine;
+}
+
+.signup-btn{
+  margin-top: 10px;
+}
+
+.login-container, .signup-card{
+  padding: 20px !important;
+  width: 280px;
+}
+
+.background-color{
+  background-image: url("./pages/assets/background.jpg");
+  background-color: #cccccc;
+}
+
+.login-screen, .signup-screen{
+align-items: center;
+
+}
+
+.login-image{
+  height: 100%;
+  width:400px;
+  padding: 20px;
+}
+
+.login-submit-btn{
+  border: solid black 1px;
+  background-color: aquamarine;
+}
+
+.signup-btn{
+  margin-top: 10px;
+}
