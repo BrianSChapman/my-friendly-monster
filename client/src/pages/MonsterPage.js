@@ -7,7 +7,9 @@ export default function MonsterPage() {
     return (
         <section className="container-fluid">
             <img src={ben} alt="Ben Gif" />
-            <button className="feedButton">FEED MONSTER</button>
+            <button>FEED MONSTER</button>
+            <button>DANCE!!!</button>
+            <button>GO TO SLEEP</button>
         </section>
     )
 }
