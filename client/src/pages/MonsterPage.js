@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { UPDATE_MONSTER, REMOVE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import ben from "./assets/ben.gif";
 import { useParams } from "react-router-dom";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
@@ -83,6 +84,12 @@ export default function MonsterPage() {
     // }
 
     return (
+        <section className="container-fluid">
+            <img src={ben} alt="Ben Gif" />
+            <button>FEED MONSTER</button>
+            <button>DANCE!!!</button>
+            <button>GO TO SLEEP</button>
+        </section>
         <div>
             <h1>MONSTER PAGE</h1>
             {/* <img src={getBiome} alt="biome background" /> */}
