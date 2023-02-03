@@ -2,9 +2,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .navbar {
   background-color: blue;
 }
+
 .title {
   text-align: center;
   font-size: 400%;
