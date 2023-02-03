@@ -14,6 +14,7 @@ import frower from "./assets/frower.gif";
 import iceabella from "./assets/iceabella.gif";
 import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
+import chomp from "./assets/chomp.mp3";
 
 export default function MonsterPage() {
 
@@ -88,11 +89,20 @@ export default function MonsterPage() {
         }
     }
 
+
+
+    const sound = () => {
+        let audio = new Audio(chomp)
+        audio.play()
+    }
+
+
+
     return (
         <div>
             <section className="container-fluid">
                 <img src={`${newMonster()}`} alt="monster pixel art" />
-                <button>FEED MONSTER</button>
+                <button onClick={sound}>FEED MONSTER</button>
                 <button>DANCE!!!</button>
                 <button>GO TO SLEEP</button>
             </section>
@@ -100,5 +110,5 @@ export default function MonsterPage() {
             <img src={`${getBiome()}`} alt="biome background" />
             <p></p>
         </div>
-    )
+    );
 }
