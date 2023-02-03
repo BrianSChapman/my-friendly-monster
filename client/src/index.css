@@ -100,3 +100,20 @@ footer {
 .signup-btn {
   margin-top: 10px;
 }
+
+.mon-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mon-btns {
+  border-color: aquamarine;
+  border-radius: 60%;
+  width: 600px;
+  height: 200px;
+  font-family: 'Black Han Sans', sans-serif;
+  color: rgb(58, 12, 163);
+  background-color: rgb(223, 156, 213);
+  font-size: xx-large
+}

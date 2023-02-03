@@ -100,12 +100,18 @@ export default function MonsterPage() {
 
     return (
         <div>
-            <section className="container-fluid">
+            <section className="container-fluid d-flex justify-content-around">
                 <img src={`${newMonster()}`} alt="monster pixel art" />
-                <button onClick={sound}>FEED MONSTER</button>
-                <button>DANCE!!!</button>
-                <button>GO TO SLEEP</button>
+                <div
+                    className="mon-btn-container">
+                    <button className="mon-btns" onClick={sound}>FEED MONSTER</button>
+                    <button className="mon-btns">DANCE!!!</button>
+                    <button className="mon-btns">GO TO SLEEP</button>
+                </div>
+
             </section>
+
+
             <h1>MONSTER PAGE</h1>
             <img src={`${getBiome()}`} alt="biome background" />
             <p></p>
