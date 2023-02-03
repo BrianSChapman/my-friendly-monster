@@ -31,6 +31,7 @@ export default function Dashboard() {
           userId: userId
         },
       });
+      window.location.reload();
     } catch (removeError) {
       console.log(removeError);
     }
