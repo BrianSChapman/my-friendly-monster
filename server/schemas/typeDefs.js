@@ -29,7 +29,7 @@ type Mutation {
         username: String!
         password: String!
         ) : Auth
-    addMonster(fullName: String!, userId: ID, imageUrl: String!) : Monster
+    addMonster(fullName: String!, imageUrl: String!) : Monster
     updateMonster(
         fullName: String
     ) : Monster
