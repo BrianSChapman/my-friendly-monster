@@ -45,13 +45,17 @@ const EggPage = () => {
     }
   };
   return (
-    <section className="container-fluid">
+    <div>
+    <h1 id="greeting">Hatch the egg!</h1>
+    <section className="container-fluid d-flex justify-content-center">
       <Link to="/dashboard">
-      <button onClick={AddMonster}>
-        <img src={egg} alt="Egg Pixel Art"/>
+      <button onClick={AddMonster}
+      className="eggBtn">
+        <img src={egg} alt="Egg Pixel Art" className="eggImg"/>
       </button>
       </Link>
     </section>
+    </div>
   );
 };
 export default EggPage;

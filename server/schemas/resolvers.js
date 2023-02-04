@@ -1,5 +1,6 @@
 const { Monster, User } = require("../models");
 const { signToken } = require("../utils/auth");
+const mongoose = require("mongoose");
 const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
@@ -90,12 +91,15 @@ const resolvers = {
     // }
 
     removeMonster: async (parent, { monsterId, userId }, context) => {
+      await Monster.findOneAndDelete({ _id: monsterId })
       const updatedUser = await User.findOneAndUpdate(
         { _id: userId },
-        { $pull: { monsters: { _id: monsterId } } },
+        { $pull: { monsters: { _id: mongoose.Types.ObjectId(monsterId) } } },
         { new: true }
-      );
-
+      ).exec();
+        console.log(updatedUser);
+        console.log(monsterId);
+        console.log(userId);
       // if (!updatedUser) {
       // throw new Error(User with id ${userId} not found);
       // }
