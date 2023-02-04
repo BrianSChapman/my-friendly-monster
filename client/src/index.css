@@ -26,7 +26,10 @@ body {
   border-bottom: 2px dashed var(--indigo);
 }
 
-a, .nav-link {
+
+a,
+.nav-link {
+
   color: var(--indigo);
   text-decoration: none;
 }
@@ -35,21 +38,30 @@ a, .nav-link {
   text-align: center;
   font-size: 300%;
 }
+
 /* Links hidden until user is logged in */
 .hidden {
-  display:none;
+  display: none;
 }
 
 footer {
-  bottom:0;
-  left:0;
-  width:100%;
-  height:90px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+
   background-color: var(--indigo);
   border-top: 2px dashed var(--custompink)
 }
 
-.background-color{
+
+.login-container,
+.signup-card {
+  padding: 20px !important;
+  width: 280px;
+}
+
+.background-color {
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
 }
@@ -59,39 +71,72 @@ align-items: center;
 height: fit-content;
 }
 
-.login-image{
+.login-image {
   height: 100%;
-  width:400px;
+  width: 400px;
   padding: 20px;
 }
 
-.login-submit-btn{
+.login-submit-btn {
   border: solid black 1px;
   background-color: aquamarine;
 }
 
-.signup-btn{
+.signup-btn {
   margin-top: 10px;
 }
 
-.login-container, .signup-card{
+.login-container,
+.signup-card {
   padding: 20px !important;
   width: 280px;
   background-color: #A2D2FF;
 }
 
-.background-color{
+.background-color {
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
 }
 
-.login-submit-btn{
+.login-screen,
+.signup-screen {
+  align-items: center;
+
+}
+
+.login-image {
+  height: 100%;
+  width: 400px;
+  padding: 20px;
+}
+
+.login-submit-btn {
   border: solid black 1px;
   background-color: #A2D2FF;
 }
 
-.signup-btn{
+.signup-btn {
   margin-top: 10px;
+}
+
+
+.mon-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mon-btns {
+  border-color: aquamarine;
+  border-radius: 60%;
+  border-width: 6px;
+  border-style: solid;
+  width: 600px;
+  height: 200px;
+  font-family: 'Black Han Sans', sans-serif;
+  color: rgb(58, 12, 163);
+  background-color: rgb(223, 156, 213);
+  font-size: xx-large
 }
 
 /* Dashboard */
@@ -109,41 +154,72 @@ height: fit-content;
   /* border: 4px #be02c1 solid !important; */
   box-shadow: 5px 5px #be02c1;
 }
+
+
 .dashImg {
   width: 100%;
   height: 15vw;
-  object-fit:contain;
+  object-fit: contain;
 }
+
 .card-header {
   background-color: var(--pink) !important;
 }
+
 .card-body {
   background-color: var(--pastellightpink);
 }
+
+
 .card-body:hover {
   background-color: var(--lightblue);
 }
+
 .rehomeBtn {
   background-color: #CDB4DB;
-  color:#7209B7;
-  border:2px #7209B7 solid;
+  color: #7209B7;
+  border: 2px #7209B7 solid;
 }
+
+
 .plusImg {
   width: 100%;
   height: 15vw;
   padding: 15%;
-  object-fit:contain;
+
+  object-fit: contain;
 }
+
 /* Egg Page */
 .eggBtn {
   border: 0;
-  background-color:#390ca300;
+  background-color: #390ca300;
   padding-top: 50%;
 }
+
+
 .eggImg {
   width: 100%;
   height: 20vw;
   object-fit: contain;
 }
 
-@media screen and 
+.biome-background{
+  position: absolute;
+  /* width: 100%;
+  height: 20vw; */
+  z-index: -1;
+
+}
+
+.monster-with-biome{
+  width: fit-content;
+  height: fit-content;
+  max-width: 200%;
+}
+
+.monster-on-monster-page{
+  /* object-fit: contain; */
+  width: 90vw;
+  height: 90vh;
+}

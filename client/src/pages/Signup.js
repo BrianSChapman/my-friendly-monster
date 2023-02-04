@@ -44,7 +44,7 @@ const Signup = () => {
         <div className="signup-card my-1 border border-primary rounded">
         <Link to="/">← Go back to login</Link>
         <h2>Sign Up</h2>
-          <div className="card-body flex-row space-between my-2">
+          <div className="card-body-signup flex-row space-between my-2">
             {data ? (
               <p>
                 Success! You may now head{' '}

@@ -74,7 +74,7 @@ export default function Dashboard() {
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
-      <div class="container-fluid d-flex p-5 flex-wrap mt-6">
+      <div className="container-fluid d-flex p-5 flex-wrap mt-6">
       {monsters.map((monster) => (
         <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
           <Link
