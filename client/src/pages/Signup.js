@@ -39,6 +39,7 @@ const Signup = () => {
 
   //    Need to Style this part 
   return (
+
     <div className='login-screen justify-content-center d-flex flex-column' >
       <div className="my-5 rounded" id="signup-box">
         <h2 className="loginTitle text-center">Sign Up</h2>

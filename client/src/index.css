@@ -122,7 +122,6 @@ box-shadow: 7px 7px var(--purple);
   background-color: aquamarine;
 }
 
-
 .login-container, .signup-card {
   padding: 20px !important;
   width: 280px;
@@ -226,4 +225,3 @@ box-shadow: 7px 7px var(--purple);
   width: 100%;
   height: 20vw;
   object-fit: contain;
-}
