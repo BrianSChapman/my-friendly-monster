@@ -94,8 +94,6 @@ export default function MonsterPage() {
         audio.play()
     }
 
-
-
     return (
         <div>
             <section className="container-fluid d-flex justify-content-around">
