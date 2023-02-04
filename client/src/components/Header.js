@@ -2,10 +2,6 @@ import React, { usetState } from "react";
 import Auth from '../utils/auth';
 
 
-
-
-
-
 export default function Header() {
   
   return (
@@ -14,7 +10,7 @@ export default function Header() {
       <h1 className="title text-center">My Friendly Monster</h1>
         <ul className="nav justify-content-end">
           <li className="nav-item">
-            <a className="nav-link hidden" href="#">
+            <a className="nav-link hidden" href="#" onClick={Auth.logout}>
               Logout
             </a>
           </li>

@@ -40,9 +40,9 @@ a,
 }
 
 /* Links hidden until user is logged in */
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 footer {
   position: fixed;
