@@ -102,7 +102,7 @@ export default function MonsterPage() {
 
     setTimeout(() => {
       setFoodTime(false);
-    }, 5000);
+    }, 4000);
 
     clearTimeout();
   };

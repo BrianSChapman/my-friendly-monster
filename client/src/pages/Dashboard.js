@@ -11,7 +11,7 @@ import frower from "./assets/frower.gif";
 import iceabella from "./assets/iceabella.gif";
 import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
-import plus from "./assets/plus.gif"
+import plus from "./assets/plus.gif";
 
 export default function Dashboard() {
   const tokenTest = Auth.getProfile();
@@ -39,9 +39,7 @@ export default function Dashboard() {
 
   // const [ monsterName, setMonsterName] = useState("My Monster");
 
-  // const [ updateMonster, { updateError } ] = useMutation(UPDATE_MONSTER); 
-
-
+  // const [ updateMonster, { updateError } ] = useMutation(UPDATE_MONSTER);
 
   const newMonster = (monster) => {
     switch (monster) {
@@ -75,49 +73,60 @@ export default function Dashboard() {
     console.log(monsters);
   }
 
-// Update the name by clicking the card header
+  // Update the name by clicking the card header
 
+  // const [fullName, setFullName] = useState("My Monster");
+
+  // const handleInputChange = (e) => {
+  //   const { target } = e;
+  //   const inputType = target.name;
+  //   const inputValue = target.value;
+
+  //   if (inputType === "fullName") {
+  //     setFullName(inputValue);
+  //   }
 
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
       <div className="container-fluid d-flex p-5 flex-wrap mt-6">
-      {monsters.map((monster) => (
-        <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
-
-
+        {monsters.map((monster) => (
+          <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
             <h4 className="card-header text-white text-center p-2 m-0">
-              {monster.fullName}  &#9999;&#65039;<br />
-
+              {monster.fullName} &#9999;&#65039;
+              <br />
             </h4>
-            <Link
-            to={`/monsterpage/${monster._id}`}>
-            <div className="card-body p-2">
-              <img
-                src={`${newMonster(monster.imageUrl)}`}
-                alt="Monster Artwork"
-                className="dashImg"/>
-            </div>
-          </Link>
-          <button
-            className="rehomeBtn rounded"
-            onClick={() => { RemoveMonster(monster._id, userId) }}>Delete Monster</button>
-        </div>
-      ))}
+            <Link to={`/monsterpage/${monster._id}`}>
+              <div className="card-body p-2">
+                <img
+                  src={`${newMonster(monster.imageUrl)}`}
+                  alt="Monster Artwork"
+                  className="dashImg"
+                />
+              </div>
+            </Link>
+            <button
+              className="rehomeBtn rounded"
+              onClick={() => {
+                RemoveMonster(monster._id, userId);
+              }}
+            >
+              Delete Monster
+            </button>
+          </div>
+        ))}
 
-      <Link to={"/eggpage"}>
-      <div className="card mb-3 p-2 border-0">
+        <Link to={"/eggpage"}>
+          <div className="card mb-3 p-2 border-0">
             <h4 className="card-header text-light text-center p-2 m-0">
-              New Monster<br />
+              New Monster
+              <br />
             </h4>
             <div className="card-body p-2">
-            <img
-                src={plus}
-                alt="plus icon"
-                className="plusImg"/>
+              <img src={plus} alt="plus icon" className="plusImg" />
             </div>
-        </div>
-      </Link>
+          </div>
+        </Link>
       </div>
     </div>
   );
