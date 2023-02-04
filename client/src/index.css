@@ -1,18 +1,34 @@
-curl -o- https: //raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bashbody {
-margin: 0;
-padding: 0;
+:root {
+  /* Bright Colors */
+  --pink: #F72585;
+  --purple: #7209B7;
+  --indigo: #3A0CA3;
+  --blue: #4361EE;
+  --lightblue: #4CC9F0;
+  /* Pastel Colors */
+  --pastelpurple: #CDB4DB;
+  --pastellightpink: #FFC8DD;
+  --pastelpink: #FFAFCC;
+  --custompink: rgb(223, 156, 213);
+  --pastellightblue: #BDE0FE;
+  --pastelblue: #A2D2FF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  background-color: rgb(223, 156, 213);
-  color: rgb(58, 12, 163);
+  background-color: var(--pastellightpink);
+  color: var(--indigo);
   font-family: 'Black Han Sans', sans-serif;
-  border-bottom: 2px dashed rgb(58, 12, 163);
+  border-bottom: 2px dashed var(--indigo);
 }
 
 a,
 .nav-link {
-  color: rgb(58, 12, 163);
+  color: var(--indigo);
   text-decoration: none;
 }
 
@@ -32,8 +48,8 @@ footer {
   left: 0;
   width: 100%;
   height: 90px;
-  background-color: rgb(58, 12, 163);
-  border-top: 2px dashed rgb(223, 156, 213)
+  background-color: var(--indigo);
+  border-top: 2px dashed var(--custompink)
 }
 
 
@@ -119,3 +135,67 @@ footer {
   background-color: rgb(223, 156, 213);
   font-size: xx-large
 }
+
+/* Dashboard */
+#greeting {
+  background-color: #4315afdd !important;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1%;
+}
+
+.cardContainer {}
+
+.card {
+  padding: 0 !important;
+  width: 18rem !important;
+  /* border: 4px #be02c1 solid !important; */
+  box-shadow: 5px 5px #be02c1;
+}
+
+.dashImg {
+  width: 100%;
+  height: 15vw;
+  object-fit: contain;
+}
+
+.card-header {
+  background-color: var(--pink) !important;
+}
+
+.card-body {
+  background-color: var(--pastellightpink);
+}
+
+.card-body:hover {
+  background-color: var(--lightblue);
+}
+
+.rehomeBtn {
+  background-color: #CDB4DB;
+  color: #7209B7;
+  border: 2px #7209B7 solid;
+}
+
+.plusImg {
+  width: 100%;
+  height: 15vw;
+  padding: 15%;
+  object-fit: contain;
+}
+
+/* Egg Page */
+.eggBtn {
+  border: 0;
+  background-color: #390ca300;
+  padding-top: 50%;
+}
+
+.eggImg {
+  width: 100%;
+  height: 20vw;
+  object-fit: contain;
+}
+
+@media screen and
