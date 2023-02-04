@@ -11,6 +11,7 @@ import frower from "./assets/frower.gif";
 import iceabella from "./assets/iceabella.gif";
 import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
+import plus from "./assets/plus.gif"
 
 export default function Dashboard() {
   const tokenTest = Auth.getProfile();
@@ -30,6 +31,7 @@ export default function Dashboard() {
           userId: userId
         },
       });
+      window.location.reload();
     } catch (removeError) {
       console.log(removeError);
     }
@@ -71,17 +73,17 @@ export default function Dashboard() {
   }
   return (
     <div>
-      <h1>THIS IS DASHBOARD</h1>
+      <h1 id="greeting">Click a monster to say hi!</h1>
       <div class="container-fluid d-flex p-5 flex-wrap mt-6">
       {monsters.map((monster) => (
-        <div key={monster._id} className="card mb-3 p-2 border-0">
+        <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
           <Link
             to={`/monsterpage/${monster._id}`}
           >
-            <h4 className="card-header text-light p-2 m-0">
+            <h4 className="card-header text-white text-center p-2 m-0">
               {monster.fullName} <br />
             </h4>
-            <div className="card-body bg-light p-2">
+            <div className="card-body p-2">
               <img
                 src={`${newMonster(monster.imageUrl)}`}
                 alt="Monster Artwork"
@@ -95,7 +97,17 @@ export default function Dashboard() {
       ))}
 
       <Link to={"/eggpage"}>
-        <button>Create Monster</button>{" "}
+      <div className="card mb-3 p-2 border-0">
+            <h4 className="card-header text-light text-center p-2 m-0">
+              New Monster<br />
+            </h4>
+            <div className="card-body p-2">
+            <img
+                src={plus}
+                alt="plus icon"
+                className="plusImg"/>
+            </div>
+        </div>
       </Link>
       </div>
     </div>
