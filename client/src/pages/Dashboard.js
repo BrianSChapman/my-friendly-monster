@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { REMOVE_MONSTER } from "../utils/mutations"
+import { REMOVE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import beety from "./assets/beety.gif";
@@ -28,17 +28,16 @@ export default function Dashboard() {
       removeMonster({
         variables: {
           monsterId: monsterId,
-          userId: userId
+          userId: userId,
         },
       });
       window.location.reload();
     } catch (removeError) {
       console.log(removeError);
     }
-  }
+  };
 
   const newMonster = (monster) => {
-
     switch (monster) {
       case "wavy":
         return wavy;
@@ -62,15 +61,14 @@ export default function Dashboard() {
         return ben;
         break;
     }
-  }
+  };
   if (loading) {
-    return (
-      <div>Loadingf</div>
-    )
+    return <div>Loading</div>;
   }
   if (monsters) {
-    console.log(monsters)
+    console.log(monsters);
   }
+
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
