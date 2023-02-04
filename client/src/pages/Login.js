@@ -31,53 +31,61 @@ function Login(props) {
   };
   return (
     <div className='login-screen justify-content-center d-flex flex-column' >
-    <div className="login-container bg-info p-1 my-1 border border-primary rounded" id="login-box">
-      <Link to="/signup">← Go to Signup</Link>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="username">Username:</label>
-          <input
-            placeholder="username"
-            name="username"
-            type="username"
-            id="username"
-            onChange={handleChange}
-          />
-        </div>
-         
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+      <div className="my-5 rounded" id="login-box">
+        <h2 className="loginTitle text-center">Welcome!</h2>
+        <form onSubmit={handleFormSubmit} className="loginForm text-center">
+          <div className="flex-row space-between my-2">
+            {/* <label htmlFor="username" className="formLbl">Username:</label> */}
+            <input
+              placeholder="Username"
+              name="username"
+              type="username"
+              id="username"
+              className="loginInput"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        <div className="flex-row flex-end">
-        <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-        </div>
-      </form>
 
+          <div className="flex-row space-between my-2">
+            {/* <label htmlFor="pwd" className="formLbl">Password:</label> */}
+            <input
+              placeholder="Password"
+              name="password"
+              type="password"
+              id="pwd"
+              className="loginInput"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">The provided credentials are incorrect</p>
+            </div>
+          ) : null}
+          <div className="flex-row flex-end">
+            <button
+              className="btn btn-block m-2 btn-primary"
+              style={{ cursor: 'pointer' }}
+              type="submit"
+            >
+              Log In
+            </button>
+            <Link to="/signup"><button
+              className="btn btn-block btn-primary"
+              style={{ cursor: 'pointer' }}
+              type="submit"
+            >
+              Sign Up
+            </button></Link>
+          </div>
+        </form>
+
+      </div>
+      <div>
+        <img className="login-image" src={beety} alt="beety" />
+      </div>
     </div>
-    <div>
-      <img className="login-image" src={beety} alt="beety"/>
-    </div>
-    </div>  
-    
+
   );
 }
 export default Login;
