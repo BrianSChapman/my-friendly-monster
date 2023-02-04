@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UPDATE_MONSTER, REMOVE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
@@ -94,22 +94,38 @@ export default function MonsterPage() {
       <section className="container pt-5">
         <div className="row">
           <div className="col-9 image-column">
-          <img src={`${newMonster()}`} alt="monster pixel art" className="monster-page-image" />
-          <img src={`${getBiome()}`} alt="biome background" className="biome"/>
+            <img
+              src={`${newMonster()}`}
+              alt="monster pixel art"
+              className="monster-page-image"
+            />
+            <img
+              src={`${getBiome()}`}
+              alt="biome background"
+              className="biome"
+            />
           </div>
           <div className="col-3">
-        <div className="mon-btn-container">
-          <button className="mon-btns" onClick={sound}>
-            FEED MONSTER
+            <div className="mon-btn-container">
+              <button className="mon-btns" onClick={sound}>
+                FEED MONSTER &#127829;
+              </button>
+              <button className="mon-btns"> LET'S DANCE!!! &#128131;</button>
+              <button className="mon-btns">TIME FOR BED &#128564;</button>
+              <div className="d-grid">
+        <Link to="/dashboard">
+          <button
+            className="btn back-btn btn-lg"
+            style={{ cursor: "pointer" }}
+            type="submit">
+            To Dashboard
           </button>
-          <button className="mon-btns">DANCE!!!</button>
-          <button className="mon-btns">GO TO SLEEP</button>
+        </Link>
         </div>
-        </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      <p></p>
     </div>
   );
 }

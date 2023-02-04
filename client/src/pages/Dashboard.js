@@ -90,7 +90,7 @@ export default function Dashboard() {
           </Link>
           <button
             className="rehomeBtn rounded"
-            onClick={() => { RemoveMonster(monster._id, userId) }}>Rehome</button>
+            onClick={() => { RemoveMonster(monster._id, userId) }}>Delete Monster</button>
         </div>
       ))}
 
