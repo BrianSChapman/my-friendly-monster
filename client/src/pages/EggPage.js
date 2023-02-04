@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ADD_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 import egg from "./assets/zh3j4qF.gif";
 // import beety from './assets/beety.gif';
 // import ben from './assets/ben.gif';
@@ -44,11 +45,19 @@ const EggPage = () => {
     }
   };
   return (
-    <section className="container-fluid">
-      <button onClick={AddMonster}>
-        <img src={egg} alt="Egg Pixel Art"/>
+    <div>
+    <h1 id="greeting">Hatch the egg!</h1>
+    <section className="container-fluid d-flex justify-content-center">
+      {/* <Link to="/dashboard"> */}
+      <a onClick={() => {window.location.href="/dashboard"}}>
+      <button onClick={AddMonster}
+      className="eggBtn">
+        <img src={egg} alt="Egg Pixel Art" className="eggImg"/>
       </button>
+      </a>
+      {/* </Link> */}
     </section>
+    </div>
   );
 };
 export default EggPage;
