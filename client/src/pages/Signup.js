@@ -43,60 +43,62 @@ const Signup = () => {
       <div className="my-5 rounded" id="signup-box">
         <h2 className="loginTitle text-center">Sign Up</h2>
         {/* {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : ( */}
+          <p>
+            Success! You may now head{' '}
+            <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : null} */}
         <form onSubmit={handleFormSubmit} className="loginForm text-center">
-        <div className="flex-row space-between my-2">
-          <input
-            className="loginInput"
-            placeholder="Username"
-            name="username"
-            type="text"
-            value={formState.name}
-            onChange={handleChange}
-          />
-      </div>
+          <div className="flex-row space-between my-2">
+            <input
+              className="loginInput"
+              placeholder="Username"
+              name="username"
+              type="text"
+              value={formState.name}
+              onChange={handleChange}
+            />
+          </div>
 
-      <div className="flex-row space-between my-2">
-        <input
-          className="loginInput"
-          placeholder="Password"
-          name="password"
-          type="password"
-          value={formState.password}
-          onChange={handleChange}
-        />
-      </div>
-      {error ? (
-    <div className="error-text">
-      <p>Must include a username and a password of at least 5 characters.</p>
-    </div>
-  ) : null}
-      <div className="flex-row flex-end">
-        <button
-          className="btn btn-block m-2 btn-primary signBtn"
-          style={{ cursor: 'pointer' }}
-          type="submit"
-        >
-          Sign Up
-        </button>
-        <Link to="/"><button
-              className="btn btn-block btn-primary logBtn"
+          <div className="flex-row space-between my-2">
+            <input
+              className="loginInput"
+              placeholder="Password"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">You must provide a username and a password at least 5 characters long.</p>
+            </div>
+          ) : null}
+          <div className="flex-row flex-end">
+            <button
+              className="signup-btn btn btn-block signBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
-            >Log In
-            </button></Link>
+            >
+              Sign Up
+            </button>
+            <Link to="/"><button
+                className="btn btn-block m-2 btn-primary logBtn"
+                style={{ cursor: 'pointer' }}
+                type="submit"
+              >
+                Log In
+              </button></Link>
+          </div>
+        </form>
+
       </div>
-    </form>
-</div>
       <div>
-        <img className="login-image" src={ben} alt="beety" />
+        <img className="login-image" src={ben} alt="ben" />
       </div>
-    </div>
-  );
+      </div>
+      );
 };
 
 export default Signup;
