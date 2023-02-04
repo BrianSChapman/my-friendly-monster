@@ -50,12 +50,19 @@ footer {
   left: 0;
   width: 100%;
   height: 90px;
-  position: fixed;
-
+  font-family: 'Black Han Sans', sans-serif;
+  color:white;
   background-color: var(--indigo);
   border-top: 2px dashed var(--custompink)
 }
+
 /* Login Page */
+
+#footer-text {
+  font-size:larger;
+  margin-top: 4%;
+}
+
 #login-box {
   background-color: var(--lightblue) !important;
   width: 50%;
@@ -171,6 +178,9 @@ box-shadow: 7px 7px var(--purple);
   background-color: rgb(223, 156, 213);
   font-size: xx-large
 }
+
+
+
 
 /* Dashboard */
 #greeting {
