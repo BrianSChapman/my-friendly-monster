@@ -1,17 +1,29 @@
 import React, { usetState } from "react";
-import Auth from '../utils/auth';
-
-
+import Auth from "../utils/auth";
 
 export default function Header() {
-  
-  return (
+  const hideLogout = window.location === "/" || "/signup";
+
+  return hideLogout ? (
     <nav className="navbar navbar-expand-lg shadow-lg">
       <div className="container-fluid">
-      <h1 className="title text-center">My Friendly Monster</h1>
+        <h1 className="title text-center">My Friendly Monster</h1>
+        <ul className="nav justify-content-end">
+          <li className="nav-item"></li>
+        </ul>
+      </div>
+    </nav>
+  ) : (
+    <nav className="navbar navbar-expand-lg shadow-lg">
+      <div className="container-fluid">
+        <h1 className="title text-center">My Friendly Monster</h1>
         <ul className="nav justify-content-end">
           <li className="nav-item">
-            <a className="nav-link hidden" href="#" onClick={Auth.logout}>
+            <a
+              className="nav-link logout-link hidden"
+              href="#"
+              onClick={Auth.logout}
+            >
               Logout
             </a>
           </li>

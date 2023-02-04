@@ -37,6 +37,12 @@ export default function Dashboard() {
     }
   };
 
+  // const [ monsterName, setMonsterName] = useState("My Monster");
+
+  // const [ updateMonster, { updateError } ] = useMutation(UPDATE_MONSTER); 
+
+
+
   const newMonster = (monster) => {
     switch (monster) {
       case "wavy":
@@ -69,18 +75,23 @@ export default function Dashboard() {
     console.log(monsters);
   }
 
+// Update the name by clicking the card header
+
+
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
       <div className="container-fluid d-flex p-5 flex-wrap mt-6">
       {monsters.map((monster) => (
         <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
-          <Link
-            to={`/monsterpage/${monster._id}`}
-          >
+
+
             <h4 className="card-header text-white text-center p-2 m-0">
-              {monster.fullName} <br />
+              {monster.fullName}  &#9999;&#65039;<br />
+
             </h4>
+            <Link
+            to={`/monsterpage/${monster._id}`}>
             <div className="card-body p-2">
               <img
                 src={`${newMonster(monster.imageUrl)}`}
