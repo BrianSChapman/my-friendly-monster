@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
+import chomp from "./assets/chomp.mp3"
 import beachy from "./assets/beachy.jpg"
 import safari from "./assets/Safari.jpg"
 import jungle from "./assets/Jungle.jpg"
@@ -54,8 +55,8 @@ export default function MonsterPage() {
                         break;
                 }
             }
-            return "no biome"
         }
+        return "no biome"
     }
 
     const newMonster = () => {
