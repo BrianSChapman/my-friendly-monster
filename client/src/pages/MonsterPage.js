@@ -54,8 +54,8 @@ export default function MonsterPage() {
                         break;
                 }
             }
-            return "no biome"
         }
+        return "no biome"
     }
 
     const newMonster = () => {
