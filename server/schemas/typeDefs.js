@@ -33,7 +33,7 @@ type Mutation {
     updateMonster(
         fullName: String
     ) : Monster
-    removeMonster(monster: ID!, userId: ID!) : User
+    removeMonster(monsterId: ID!, userId: ID!) : User
     login(username: String!, password: String!) : Auth
 }
 `;
