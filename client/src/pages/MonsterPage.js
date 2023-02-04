@@ -15,7 +15,6 @@ import frower from "./assets/frower.gif";
 import iceabella from "./assets/iceabella.gif";
 import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
-import chomp from './assets/chomp.mp3'
 
 export default function MonsterPage() {
 
