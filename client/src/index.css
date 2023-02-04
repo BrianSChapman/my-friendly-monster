@@ -112,10 +112,9 @@ box-shadow: 7px 7px var(--purple);
   background-color: #cccccc;
 }
 
-.login-screen,
-.signup-screen {
-  align-items: center;
-
+.login-screen, .signup-screen{
+align-items: center;
+height: fit-content;
 }
 
 .login-image {
@@ -132,6 +131,7 @@ box-shadow: 7px 7px var(--purple);
 .login-container, .signup-card {
   padding: 20px !important;
   width: 280px;
+  background-color: #A2D2FF;
 }
 .background-img{
   background-image: url("./pages/assets/background.jpg");
@@ -152,7 +152,7 @@ box-shadow: 7px 7px var(--purple);
 
 .login-submit-btn {
   border: solid black 1px;
-  background-color: var(--lightblue);
+  background-color: #A2D2FF;
 }
 
 .signup-btn {
@@ -207,6 +207,8 @@ box-shadow: 7px 7px var(--purple);
 .card-body {
   background-color: var(--pastellightpink);
 }
+
+
 .card-body:hover {
   background-color: var(--lightblue);
 }
@@ -235,4 +237,30 @@ box-shadow: 7px 7px var(--purple);
   width: 100%;
   height: 20vw;
   object-fit: contain;
+}
+
+.monster-page-image{
+  width: 40%;
+  padding-top: 9%;
+  padding-left: 10%;
+  margin: 0;
+}
+
+.biome{
+  position: relative;
+  top: -46%;
+  width: 100%;
+  z-index:-1;
+  padding: 0;
+  margin: 0;
+  box-shadow: 7px 7px black;
+  border: 2px solid purple;
+  border-radius: 2%;
+}
+
+.image-column{
+  padding: 0;
+  margin: 0;
+  margin-left: -10%;
+  margin-right:2%;
 }
