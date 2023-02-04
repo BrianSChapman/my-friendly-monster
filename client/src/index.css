@@ -53,12 +53,7 @@ footer {
   background-color: var(--indigo);
   border-top: 2px dashed var(--custompink)
 }
-
-.signup-card {
-  padding: 20px !important;
-  width: 280px;
-}
-
+/* Login Page */
 #login-box {
   background-color: var(--lightblue) !important;
   width: 50%;
@@ -78,8 +73,29 @@ font-size: 120%;
 /* border: 2px var(--pink) solid !important; */
 box-shadow: 7px 7px var(--purple);
 }
-.formLbl {
-  font-size: 120%;
+.logBtn {
+  font-size: 100%;
+  background-color: #7a4ede !important;
+  border: none !important;
+}
+.logBtn:hover {
+  font-size: 100%;
+  background-color: var(--purple) !important;
+}
+/* Sign Up Page */
+#signup-box {
+  background-color: var(--pastelpurple) !important;
+  width: 50%;
+  box-shadow:10px 10px var(--purple);
+}
+.signBtn {
+  font-size: 100%;
+  background-color: #d233d5 !important;
+  border: none !important;
+}
+.signBtn:hover {
+  font-size: 100%;
+  background-color: #be02c1 !important;
 }
 
 .background-color {
@@ -97,21 +113,6 @@ box-shadow: 7px 7px var(--purple);
   height: 100%;
   width: 400px;
   padding: 20px;
-}
-
-.login-submit-btn {
-  border: solid black 1px;
-  background-color: aquamarine;
-}
-
-.signup-btn {
-  margin-top: 10px;
-}
-
-.login-container,
-.signup-card {
-  padding: 20px !important;
-  width: 280px;
 }
 
 .background-color {

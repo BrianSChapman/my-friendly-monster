@@ -64,14 +64,14 @@ function Login(props) {
           ) : null}
           <div className="flex-row flex-end">
             <button
-              className="btn btn-block m-2 btn-primary"
+              className="btn btn-block m-2 btn-primary logBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >
               Log In
             </button>
             <Link to="/signup"><button
-              className="btn btn-block btn-primary"
+              className="btn btn-block btn-primary signBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >

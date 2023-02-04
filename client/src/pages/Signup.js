@@ -37,61 +37,65 @@ const Signup = () => {
     }
   };
 
-//    Need to Style this part 
+  //    Need to Style this part 
   return (
-    <main className="align-items-center flex-row justify-center mb-4 justify-content-center">
-      <div className="signup-screen d-flex flex-column">
-        <div className="signup-card  bg-info my-1 border border-primary rounded">
-        <Link to="/">← Go back to login</Link>
-        <h2>Sign Up</h2>
-          <div className="card-body flex-row space-between my-2">
-            {data ? (
+    <div className='login-screen justify-content-center d-flex flex-column' >
+      <div className="my-5 rounded" id="signup-box">
+        <h2 className="loginTitle text-center">Sign Up</h2>
+        {/* {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <label htmlFor="username">Username:</label>
-                <input
-                  className="form-input space-between my-2"
-                  placeholder="username"
-                  name="username"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <label htmlFor="pwd">Password:</label>
-                <input
-                  className="form-input space-between"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="signup-btn btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-        <div>
-      <img className="login-image" src={ben} alt="ben"/>
-    </div>
+            ) : ( */}
+        <form onSubmit={handleFormSubmit} className="loginForm text-center">
+        <div className="flex-row space-between my-2">
+          <input
+            className="loginInput"
+            placeholder="Username"
+            name="username"
+            type="text"
+            value={formState.name}
+            onChange={handleChange}
+          />
       </div>
-    </main>
+
+      <div className="flex-row space-between my-2">
+        <input
+          className="loginInput"
+          placeholder="Password"
+          name="password"
+          type="password"
+          value={formState.password}
+          onChange={handleChange}
+        />
+      </div>
+      {error ? (
+    <div className="error-text">
+      <p>Must include a username and a password of at least 5 characters.</p>
+    </div>
+  ) : null}
+      <div className="flex-row flex-end">
+        <button
+          className="btn btn-block m-2 btn-primary signBtn"
+          style={{ cursor: 'pointer' }}
+          type="submit"
+        >
+          Sign Up
+        </button>
+        <Link to="/"><button
+              className="btn btn-block btn-primary logBtn"
+              style={{ cursor: 'pointer' }}
+              type="submit"
+            >Log In
+            </button></Link>
+      </div>
+    </form>
+</div>
+      <div>
+        <img className="login-image" src={ben} alt="beety" />
+      </div>
+    </div>
   );
 };
 
