@@ -36,7 +36,7 @@ const client = new ApolloClient({
 });
 
 function App() {
-  document.body.classList.add('background-color')
+  document.body.classList.add('background-img')
   return (
     <ApolloProvider client={client}>
       <Header />

@@ -45,20 +45,66 @@ a,
 }
 
 footer {
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 90px;
-
+  font-family: 'Black Han Sans', sans-serif;
+  color:white;
   background-color: var(--indigo);
   border-top: 2px dashed var(--custompink)
 }
 
+/* Login Page */
 
-.login-container,
-.signup-card {
-  padding: 20px !important;
-  width: 280px;
+#footer-text {
+  font-size:larger;
+  margin-top: 4%;
+}
+
+#login-box {
+  background-color: var(--lightblue) !important;
+  width: 50%;
+  box-shadow:10px 10px var(--purple);
+}
+.loginTitle {
+  font-size: 300%;
+  padding-top: 2%;
+}
+.loginForm {
+  font-size: 120%;
+  padding: 2%;
+}
+.loginInput {
+margin: 2%;
+font-size: 120%;
+/* border: 2px var(--pink) solid !important; */
+box-shadow: 7px 7px var(--purple);
+}
+.logBtn {
+  font-size: 100%;
+  background-color: #7a4ede !important;
+  border: none !important;
+}
+.logBtn:hover {
+  font-size: 100%;
+  background-color: var(--purple) !important;
+}
+/* Sign Up Page */
+#signup-box {
+  background-color: var(--pastelpurple) !important;
+  width: 50%;
+  box-shadow:10px 10px var(--purple);
+}
+.signBtn {
+  font-size: 100%;
+  background-color: #d233d5 !important;
+  border: none !important;
+}
+.signBtn:hover {
+  font-size: 100%;
+  background-color: #be02c1 !important;
 }
 
 .background-color {
@@ -82,25 +128,19 @@ height: fit-content;
   background-color: aquamarine;
 }
 
-.signup-btn {
-  margin-top: 10px;
-}
-
-.login-container,
-.signup-card {
+.login-container, .signup-card {
   padding: 20px !important;
   width: 280px;
   background-color: #A2D2FF;
 }
-
-.background-color {
+.background-img{
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
 }
 
-.login-screen,
-.signup-screen {
+.login-screen, .signup-screen {
   align-items: center;
+  padding-top: 15px;
 
 }
 
@@ -139,6 +179,9 @@ height: fit-content;
   font-size: xx-large
 }
 
+
+
+
 /* Dashboard */
 #greeting {
   background-color: #4315afdd !important;
@@ -147,25 +190,20 @@ height: fit-content;
   margin-bottom: 0;
   padding: 1%;
 }
-
 .card {
   padding: 0 !important;
   width: 18rem !important;
   /* border: 4px #be02c1 solid !important; */
   box-shadow: 5px 5px #be02c1;
 }
-
-
 .dashImg {
   width: 100%;
   height: 15vw;
   object-fit: contain;
 }
-
 .card-header {
   background-color: var(--pink) !important;
 }
-
 .card-body {
   background-color: var(--pastellightpink);
 }
@@ -174,14 +212,11 @@ height: fit-content;
 .card-body:hover {
   background-color: var(--lightblue);
 }
-
 .rehomeBtn {
   background-color: #CDB4DB;
   color: #7209B7;
   border: 2px #7209B7 solid;
 }
-
-
 .plusImg {
   width: 100%;
   height: 15vw;
