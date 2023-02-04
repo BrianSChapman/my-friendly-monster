@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { REMOVE_MONSTER } from "../utils/mutations"
+import { REMOVE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import beety from "./assets/beety.gif";
@@ -27,16 +27,15 @@ export default function Dashboard() {
       removeMonster({
         variables: {
           monsterId: monsterId,
-          userId: userId
+          userId: userId,
         },
       });
     } catch (removeError) {
       console.log(removeError);
     }
-  }
+  };
 
   const newMonster = (monster) => {
-
     switch (monster) {
       case "wavy":
         return wavy;
@@ -60,43 +59,46 @@ export default function Dashboard() {
         return ben;
         break;
     }
-  }
+  };
   if (loading) {
-    return (
-      <div>Loadingf</div>
-    )
+    return <div>Loading</div>;
   }
   if (monsters) {
-    console.log(monsters)
+    console.log(monsters);
   }
+
   return (
     <div>
       <h1>THIS IS DASHBOARD</h1>
       <div class="container-fluid d-flex p-5 flex-wrap mt-6">
-      {monsters.map((monster) => (
-        <div key={monster._id} className="card mb-3 p-2 border-0">
-          <Link
-            to={`/monsterpage/${monster._id}`}
-          >
-            <h4 className="card-header text-light p-2 m-0">
-              {monster.fullName} <br />
-            </h4>
-            <div className="card-body bg-light p-2">
-              <img
-                src={`${newMonster(monster.imageUrl)}`}
-                alt="Monster Artwork"
-                className="dashImg"/>
-            </div>
-          </Link>
-          <button
-            className="rehomeBtn rounded"
-            onClick={() => { RemoveMonster(monster._id, userId) }}>Rehome</button>
-        </div>
-      ))}
+        {monsters.map((monster) => (
+          <div key={monster._id} className="card mb-3 p-2 border-0">
+            <Link to={`/monsterpage/${monster._id}`}>
+              <h4 className="card-header text-light p-2 m-0">
+                {monster.fullName} <br />
+              </h4>
+              <div className="card-body bg-light p-2">
+                <img
+                  src={`${newMonster(monster.imageUrl)}`}
+                  alt="Monster Artwork"
+                  className="dashImg"
+                />
+              </div>
+            </Link>
+            <button
+              className="rehomeBtn rounded"
+              onClick={() => {
+                RemoveMonster(monster._id, userId);
+              }}
+            >
+              Rehome
+            </button>
+          </div>
+        ))}
 
-      <Link to={"/eggpage"}>
-        <button>Create Monster</button>{" "}
-      </Link>
+        <Link to={"/eggpage"}>
+          <button>Create Monster</button>{" "}
+        </Link>
       </div>
     </div>
   );

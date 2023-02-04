@@ -41,24 +41,13 @@ a, .nav-link {
 }
 
 footer {
-  position:fixed;
+
   bottom:0;
   left:0;
   width:100%;
   height:90px;
   background-color: var(--indigo);
   border-top: 2px dashed var(--custompink)
-}
-
-
-.login-container, .signup-card{
-  padding: 20px !important;
-  width: 280px;
-}
-
-.background-color{
-  background-image: url("./pages/assets/background.jpg");
-  background-color: #cccccc;
 }
 
 .login-screen, .signup-screen{
@@ -79,14 +68,31 @@ align-items: center;
 
 .signup-btn{
   margin-top: 10px;
+  background-color: rgb(58, 12, 163);
+  color: white
 }
+
+.signup-btn:hover {
+  background-color: rgb(94, 47, 202);
+  color: white;
+}
+
+.loginBtn {
+  background-color: rgb(58, 12, 163);
+  color: white
+}
+
+.loginBtn:hover {
+  background-color: rgb(94, 47, 202);
+  color: white;
+}
+
 
 .login-container, .signup-card{
   padding: 20px !important;
   width: 280px;
 }
-
-.background-color{
+.background-img{
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
 }
@@ -94,17 +100,6 @@ align-items: center;
 .login-screen, .signup-screen{
 align-items: center;
 
-}
-
-.login-image{
-  height: 100%;
-  width:400px;
-  padding: 20px;
-}
-
-.login-submit-btn{
-  border: solid black 1px;
-  background-color: aquamarine;
 }
 
 .signup-btn{
