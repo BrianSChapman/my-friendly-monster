@@ -63,7 +63,7 @@ function Login(props) {
         ) : null}
         <div className="flex-row flex-end">
         <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block loginBtn"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
