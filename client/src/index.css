@@ -40,9 +40,9 @@ a,
 }
 
 /* Links hidden until user is logged in */
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 footer {
   position: fixed;
@@ -82,12 +82,13 @@ font-size: 120%;
 /* border: 2px var(--pink) solid !important; */
 box-shadow: 7px 7px var(--purple);
 }
-.logBtn {
+.logBtn, .back-btn {
   font-size: 100%;
   background-color: #7a4ede !important;
   border: none !important;
+  color:white;
 }
-.logBtn:hover {
+.logBtn:hover, .back-btn:hover {
   font-size: 100%;
   background-color: var(--purple) !important;
 }
@@ -133,6 +134,7 @@ height: fit-content;
   width: 280px;
   background-color: #A2D2FF;
 }
+
 .background-img{
   background-image: url("./pages/assets/background.jpg");
   background-color: #cccccc;
@@ -163,20 +165,27 @@ height: fit-content;
 .mon-btn-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .mon-btns {
-  border-color: aquamarine;
+  border-color: var(--lightblue);
   border-radius: 60%;
-  border-width: 6px;
+  border-width: 4px;
   border-style: solid;
-  width: 600px;
-  height: 200px;
+  width: 325px;
+  height: 110px;
   font-family: 'Black Han Sans', sans-serif;
   color: rgb(58, 12, 163);
   background-color: rgb(223, 156, 213);
-  font-size: xx-large
+  font-size:x-large;
+}
+
+/* back button on MonsterPage */
+.back-btn {
+ margin:5px 70px;
+ width: 75%;
 }
 
 
