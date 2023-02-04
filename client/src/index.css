@@ -239,22 +239,28 @@ height: fit-content;
   object-fit: contain;
 }
 
-.biome-background{
-  position: absolute;
-  /* width: 100%;
-  height: 20vw; */
-  z-index: -1;
-
+.monster-page-image{
+  width: 40%;
+  padding-top: 9%;
+  padding-left: 10%;
+  margin: 0;
 }
 
-.monster-with-biome{
-  width: fit-content;
-  height: fit-content;
-  max-width: 200%;
+.biome{
+  position: relative;
+  top: -46%;
+  width: 100%;
+  z-index:-1;
+  padding: 0;
+  margin: 0;
+  box-shadow: 7px 7px black;
+  border: 2px solid purple;
+  border-radius: 2%;
 }
 
-.monster-on-monster-page{
-  /* object-fit: contain; */
-  width: 90vw;
-  height: 90vh;
+.image-column{
+  padding: 0;
+  margin: 0;
+  margin-left: -10%;
+  margin-right:2%;
 }
