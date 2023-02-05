@@ -13,32 +13,27 @@
   --pastellightblue: #BDE0FE;
   --pastelblue: #A2D2FF;
 }
-
+/* Main Page */
 body {
   margin: 0;
   padding: 0;
 }
-
 .navbar {
   background-color: var(--pastellightpink);
   color: var(--indigo);
   font-family: 'Black Han Sans', sans-serif;
   border-bottom: 2px dashed var(--indigo);
 }
-
-
 a,
 .nav-link {
 
   color: var(--indigo);
   text-decoration: none;
 }
-
 .title {
   text-align: center;
   font-size: 300%;
 }
-
 /* Logout hidden until user is logged in */
 /* .hidden {
   visibility: hidden;
@@ -47,7 +42,6 @@ a,
 .show {
   visibility: visible;
 } */
-
 footer {
   position: fixed;
   bottom: 0;
@@ -61,15 +55,13 @@ footer {
 }
 
 /* Login Page */
-
 #footer-text {
   font-size:larger;
   margin-top: 4%;
 }
-
 #login-box {
   background-color: var(--lightblue) !important;
-  width: 50%;
+  width: 30%;
   box-shadow:10px 10px var(--purple);
 }
 .loginTitle {
@@ -95,21 +87,24 @@ box-shadow: 7px 7px var(--purple);
 .logBtn:hover, .back-btn:hover {
   font-size: 100%;
   background-color: var(--purple) !important;
+  color: white;
 }
 /* Sign Up Page */
 #signup-box {
   background-color: var(--pastelpurple) !important;
-  width: 50%;
+  width: 30%;
   box-shadow:10px 10px var(--purple);
 }
 .signBtn {
   font-size: 100%;
   background-color: #d233d5 !important;
   border: none !important;
+  color: white;
 }
 .signBtn:hover {
   font-size: 100%;
   background-color: #be02c1 !important;
+  color: white;
 }
 
 .background-color {
@@ -166,33 +161,6 @@ height: fit-content;
 }
 
 
-.mon-btn-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
-}
-
-.mon-btns {
-  border-color: var(--lightblue);
-  border-radius: 60%;
-  border-width: 4px;
-  border-style: solid;
-  width: 325px;
-  height: 110px;
-  font-family: 'Black Han Sans', sans-serif;
-  color: rgb(58, 12, 163);
-  background-color: rgb(223, 156, 213);
-  font-size:x-large;
-}
-
-/* back button on MonsterPage */
-.back-btn {
- margin:5px 70px;
- width: 75%;
-}
-
-
 
 
 /* Dashboard */
@@ -216,6 +184,7 @@ height: fit-content;
 }
 .card-header {
   background-color: var(--pink) !important;
+  padding-left: 30px !important;
 }
 .card-body {
   background-color: var(--pastellightpink);
@@ -229,6 +198,9 @@ height: fit-content;
   background-color: #CDB4DB;
   color: #7209B7;
   border: 2px #7209B7 solid;
+}
+.newHeader {
+  padding-left: 15px !important;
 }
 .plusImg {
   width: 100%;
@@ -251,13 +223,7 @@ height: fit-content;
   height: 20vw;
   object-fit: contain;
 }
-
-.monster-card-btn {
-  border: none;
-  background-color: var(--pink);
-
-}
-
+/*  Monster Page */
 .monster-page-image{
   width: 40%;
   padding-top: 9%;
@@ -293,4 +259,125 @@ height: fit-content;
   margin: 0;
   margin-left: -10%;
   margin-right:2%;
+}
+.mon-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.mon-btns {
+  border-color: var(--lightblue);
+  border-radius: 60%;
+  border-width: 4px;
+  border-style: solid;
+  width: 325px;
+  height: 110px;
+  font-family: 'Black Han Sans', sans-serif;
+  color: rgb(58, 12, 163);
+  background-color: rgb(223, 156, 213);
+  font-size:x-large;
+}
+
+/* back button on MonsterPage */
+.back-btn {
+  margin:5px 70px;
+  width: 75%;
+ }
+
+@media screen and (max-width: 480px) {
+  #login-box {
+    width: 100%;
+  }
+  /* .navbar {
+  } */
+  #signup-box {
+    width: 100%;
+  }
+  .login-image {
+    width: 45%;
+    margin-left: 26.5%;
+  }
+  .plusImg {
+    height: 40vw;
+    padding: 15%;
+  }
+  .dashImg {
+    height: 40vw;
+  }
+  footer {
+    position: relative;
+  }
+  .pencil {
+    float: right;
+  }
+  /* Monster Page */
+  .row {
+    margin-top: -50px;
+  }
+  .monster-page-image{
+    width: 40%;
+    padding-top: 9%;
+    padding-left: 10%;
+    margin: 0;
+  }
+  .biome{
+    position: relative;
+    top: -46%;
+    width: 100%;
+    z-index:-1;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: 2px solid purple;
+    border-radius: 0;
+  }
+  
+  #disco-ball {
+    width: 48%;
+    padding: 0;
+    margin: -40%;
+    margin-left: 10%;
+    z-index: 1;
+  }
+  
+  #burger-rain {
+    z-index:1;
+    padding: 0;
+    width: 75%;
+    margin: -40%;
+  }
+  
+  .image-column{
+    padding: 0;
+    margin: 0;
+  }
+  .mon-btn-container {
+    padding: 0 !important;
+    margin-top: -200px;
+    display: flex;
+    justify-content:center;
+  }
+  
+  .mon-btns {
+    border-color: var(--lightblue);
+    border-radius: 60%;
+    border-width: 4px;
+    border-style: solid;
+    width: 325px;
+    height: 110px;
+    font-family: 'Black Han Sans', sans-serif;
+    color: rgb(58, 12, 163);
+    background-color: rgb(223, 156, 213);
+    font-size:x-large;
+    margin-left: 4%;
+  }
+  
+  /* back button on MonsterPage */
+  .back-btn {
+    margin:5px 25%;
+    width: 50%;
+   }
+
 }
