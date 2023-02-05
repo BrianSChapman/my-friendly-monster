@@ -68,12 +68,11 @@ const resolvers = {
       return await Monster.create({ fullName, userId });
     },
 
-    updateMonster: async (parent, { id, userId }) => {
+    updateMonster: async (parent, { monsterId, fullName }) => {
       return await Monster.findOneAndUpdate(
-        { _id: id },
-        { userId },
-        { new: true }
-      );
+        { _id: monsterId },
+        { $set: {fullName: fullName} },
+        { new: true })
     },
     //  Might need a second opinion on this one in particular)
     // removeMonster: async (parent, { monsterId, userId }, context) => {
