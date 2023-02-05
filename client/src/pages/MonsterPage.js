@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { UPDATE_MONSTER, REMOVE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import { useParams, Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 import chomp from "./assets/chomp.mp3";
+import dance from "./assets/dance.mp3";
 import beachy from "./assets/beachy.jpg";
 import safari from "./assets/Safari.jpg";
 import jungle from "./assets/Jungle.jpg";
@@ -15,6 +16,8 @@ import frower from "./assets/frower.gif";
 import iceabella from "./assets/iceabella.gif";
 import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
+import disco from "./assets/discoBall.gif";
+import burger from "./assets/burgerRain.gif"
 
 export default function MonsterPage() {
   const tokenTest = Auth.getProfile();
@@ -85,10 +88,46 @@ export default function MonsterPage() {
       }
     }
   };
+  // Sound & Image upon Feed Monster Button Click
   const sound = () => {
     let audio = new Audio(chomp);
     audio.play();
   };
+
+  const [foodTime, setFoodTime] = useState(false);
+
+  const handleFoodBtn = () => {
+    setFoodTime(true);
+    sound();
+
+    setTimeout(() => {
+      setFoodTime(false);
+    }, 4000);
+
+    clearTimeout();
+  };
+  
+
+
+  // Functionality for Dance Button & sound
+  const danceSound = () => {
+    let audio = new Audio(dance);
+    audio.play();
+  };
+
+  const [danceBreak, setDanceBreak] = useState(false);
+
+  const handleDanceBtn = () => {
+    setDanceBreak(true);
+    danceSound();
+
+    setTimeout(() => {
+      setDanceBreak(false);
+    }, 21000);
+
+    clearTimeout();
+  };
+
   return (
     <div>
       <section className="container pt-5">
@@ -99,6 +138,11 @@ export default function MonsterPage() {
               alt="monster pixel art"
               className="monster-page-image"
             />
+            {foodTime && (<img id="burger-rain" src={burger} alt="Raining Burgers"></img>)}
+            {danceBreak && (
+              <img id="disco-ball" src={disco} alt="Disco Ball">
+              </img>
+            )}
             <img
               src={`${getBiome()}`}
               alt="biome background"
@@ -107,21 +151,25 @@ export default function MonsterPage() {
           </div>
           <div className="col-3">
             <div className="mon-btn-container">
-              <button className="mon-btns" onClick={sound}>
+              <button className="mon-btns" onClick={handleFoodBtn}>
                 FEED MONSTER &#127829;
               </button>
-              <button className="mon-btns"> LET'S DANCE!!! &#128131;</button>
+              <button className="mon-btns" onClick={handleDanceBtn}>
+                {" "}
+                LET'S DANCE!!! &#128131;
+              </button>
               <button className="mon-btns">TIME FOR BED &#128564;</button>
               <div className="d-grid">
-        <Link to="/dashboard">
-          <button
-            className="btn back-btn btn-lg"
-            style={{ cursor: "pointer" }}
-            type="submit">
-            To Dashboard
-          </button>
-        </Link>
-        </div>
+                <Link to="/dashboard">
+                  <button
+                    className="btn back-btn btn-lg"
+                    style={{ cursor: "pointer" }}
+                    type="submit"
+                  >
+                    To Dashboard
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

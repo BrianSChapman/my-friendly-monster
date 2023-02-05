@@ -39,10 +39,14 @@ a,
   font-size: 300%;
 }
 
-/* Links hidden until user is logged in */
-.hidden {
-  display: none;
+/* Logout hidden until user is logged in */
+/* .hidden {
+  visibility: hidden;
 }
+
+.show {
+  visibility: visible;
+} */
 
 footer {
   position: fixed;
@@ -265,6 +269,17 @@ height: fit-content;
   box-shadow: 7px 7px black;
   border: 2px solid purple;
   border-radius: 2%;
+}
+
+#disco-ball {
+  width: 200px;
+  margin-bottom: 330px;
+  z-index:1
+}
+
+#burger-rain {
+  z-index:1
+
 }
 
 .image-column{
