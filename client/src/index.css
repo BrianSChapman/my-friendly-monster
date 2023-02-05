@@ -252,6 +252,12 @@ height: fit-content;
   object-fit: contain;
 }
 
+.monster-card-btn {
+  border: none;
+  background-color: var(--pink);
+
+}
+
 .monster-page-image{
   width: 40%;
   padding-top: 9%;
