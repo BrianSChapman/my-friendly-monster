@@ -93,7 +93,7 @@ export default function Dashboard() {
         {monsters.map((monster) => (
           <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
             <h4 className="card-header text-white text-center p-2 m-0">
-              {monster.fullName} &#9999;&#65039;
+              {monster.fullName} <span className="pencil">&#9999;&#65039;</span>
               <br />
             </h4>
             <Link to={`/monsterpage/${monster._id}`}>
@@ -118,7 +118,7 @@ export default function Dashboard() {
 
         <Link to={"/eggpage"}>
           <div className="card mb-3 p-2 border-0">
-            <h4 className="card-header text-light text-center p-2 m-0">
+            <h4 className="card-header newHeader text-light text-center p-2 m-0">
               New Monster
               <br />
             </h4>

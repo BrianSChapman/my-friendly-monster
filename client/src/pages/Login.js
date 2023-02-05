@@ -64,7 +64,7 @@ function Login(props) {
           ) : null}
           <div className="flex-row flex-end">
             <button
-              className="btn btn-block m-2 btn-primary logBtn"
+              className="btn btn-block m-2 me-3 btn-primary logBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >
