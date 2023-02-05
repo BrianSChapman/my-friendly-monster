@@ -78,14 +78,14 @@ const Signup = () => {
           ) : null}
           <div className="flex-row flex-end">
             <button
-              className="signup-btn btn btn-block signBtn"
+              className="btn btn-block m-2 signBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >
               Sign Up
             </button>
             <Link to="/"><button
-                className="btn btn-block m-2 btn-primary logBtn"
+                className="btn btn-block m-2 logBtn"
                 style={{ cursor: 'pointer' }}
                 type="submit"
               >

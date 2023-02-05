@@ -132,7 +132,7 @@ export default function MonsterPage() {
     <div>
       <section className="container pt-5">
         <div className="row">
-          <div className="col-9 image-column">
+          <div className="col-lg-9 col-sm-12 image-column">
             <img
               src={`${newMonster()}`}
               alt="monster pixel art"
@@ -149,7 +149,7 @@ export default function MonsterPage() {
               className="biome"
             />
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-sm-12">
             <div className="mon-btn-container">
               <button className="mon-btns" onClick={handleFoodBtn}>
                 FEED MONSTER &#127829;
