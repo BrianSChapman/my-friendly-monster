@@ -3,6 +3,7 @@ import { QUERY_SINGLE_USER } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { REMOVE_MONSTER } from "../utils/mutations";
+import { UPDATE_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import beety from "./assets/beety.gif";
@@ -21,6 +22,7 @@ export default function Dashboard() {
   });
   const monsters = data?.user.monsters || [];
   const [removeMonster, { removeError }] = useMutation(REMOVE_MONSTER);
+  const [updateMonster, { updateError}] = useMutation(UPDATE_MONSTER);
 
   const RemoveMonster = (monsterId, userId) => {
     console.log(monsterId);
@@ -36,6 +38,21 @@ export default function Dashboard() {
       console.log(removeError);
     }
   };
+
+  const UpdateMonster = (fullName, monsterId) => {
+    try {
+      console.log(`this is new fullName: ${fullName}`)
+      updateMonster({
+        variables: {
+          fullName: fullName,
+          monsterId: monsterId,
+        },
+      });
+      // window.location.reload();
+    } catch (updateError) {
+      console.log(updateError);
+    }
+  }
 
   // const [ monsterName, setMonsterName] = useState("My Monster");
 
@@ -69,9 +86,6 @@ export default function Dashboard() {
   if (loading) {
     return <div>Loading</div>;
   }
-  if (monsters) {
-    console.log(monsters);
-  }
 
   // Update the name by clicking the card header
 
@@ -86,6 +100,16 @@ export default function Dashboard() {
   //     setFullName(inputValue);
   //   }
 
+  const editName = (event, monsterId) => {
+    // var text = this.innerHTML;
+    var editableText = event.target
+    console.log(editableText);
+            editableText = editableText.innerHTML.replace(/&/g, "&amp").replace(/</g, "&lt;");
+            console.log("must've worked");
+            UpdateMonster(editableText, monsterId );
+
+  };
+
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
@@ -93,7 +117,7 @@ export default function Dashboard() {
         {monsters.map((monster) => (
           <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
             <h4 className="card-header text-white text-center p-2 m-0">
-              {monster.fullName} <span className="pencil">&#9999;&#65039;</span>
+              <span contentEditable="true" onBlur={(event) => {editName(event, monster._id)}} className="contentEditableName">{monster.fullName}</span> <span className="pencil">&#9999;&#65039;</span>
               <br />
             </h4>
             <Link to={`/monsterpage/${monster._id}`}>
