@@ -36,7 +36,7 @@ This project is licensed under the MIT license. https://choosealicense.com/licen
 
 ## How to Contribute
 
-To contribute to our application, please reach out to us via email at Antcedrone952gmail.com, Chapman.brian86@gmail.com, Colinbdeery@gmail.com, Laynenigro@gmail.com.
+To contribute to our application, please reach out to us via email at Antcedrone952@gmail.com, Chapman.brian86@gmail.com, Colinbdeery@gmail.com, Laynenigro@gmail.com.
 
 
 ## Questions
