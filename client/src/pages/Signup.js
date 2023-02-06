@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, redirect } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import ben from './assets/ben.gif';
@@ -32,7 +31,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      window.location.pathname("/dashboard");
+      redirect("/dashboard");
     } catch (e) {
       console.error(e);
     }
