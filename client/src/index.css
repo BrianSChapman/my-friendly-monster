@@ -397,5 +397,19 @@ height: fit-content;
     margin:5px 25%;
     width: 50%;
    }
+   /* Egg*/
+   .eggBtn {
+    border: 0;
+    background-color: #390ca300;
+    padding-top: 15%;
+    padding-bottom: 10%;
+  }
+  
+  
+  .eggImg {
+    width: 100%;
+    height: 100vw;
+    object-fit: contain;
+  }
 
 }
