@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ADD_MONSTER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import egg from "./assets/zh3j4qF.gif";
 import Auth from '../utils/auth';
 
@@ -43,12 +43,12 @@ const EggPage = () => {
     <h1 id="greeting">Hatch the egg!</h1>
     <section className="container-fluid d-flex justify-content-center">
       {/* <Link to="/dashboard"> */}
-      <a onClick={() => {redirect("/dashboard")}}>
+      <Link to = "/dashboard">
       <button onClick={AddMonster}
       className="eggBtn">
         <img src={egg} alt="Egg Pixel Art" className="eggImg"/>
       </button>
-      </a>
+      </Link>
       {/* </Link> */}
     </section>
     </div>

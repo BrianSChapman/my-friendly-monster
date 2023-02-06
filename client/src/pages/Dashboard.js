@@ -22,7 +22,9 @@ export default function Dashboard() {
   });
   const monsters = data?.user.monsters || [];
   const [removeMonster, { removeError }] = useMutation(REMOVE_MONSTER);
-  const [updateMonster, { updateError}] = useMutation(UPDATE_MONSTER);
+  const [updateMonster, { updateError}] = useMutation(UPDATE_MONSTER
+    // Todo: Look into Apollo Cache for this (Module 21, Act 17 & 18)
+    );
 
   const RemoveMonster = (monsterId, userId) => {
     console.log(monsterId);
@@ -48,7 +50,7 @@ export default function Dashboard() {
           monsterId: monsterId,
         },
       });
-      // window.location.reload();
+      window.location.reload();
     } catch (updateError) {
       console.log(updateError);
     }

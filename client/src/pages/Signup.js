@@ -31,7 +31,8 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      redirect("/dashboard");
+      // redirect("/dashboard");
+
     } catch (e) {
       console.error(e);
     }
@@ -76,13 +77,13 @@ const Signup = () => {
             </div>
           ) : null}
           <div className="flex-row flex-end">
-            <button
+            <Link to = "/dashboard"> <button
               className="btn btn-block m-2 signBtn"
               style={{ cursor: 'pointer' }}
               type="submit"
             >
               Sign Up
-            </button>
+            </button> </Link>
             <Link to="/"><button
                 className="btn btn-block m-2 logBtn"
                 style={{ cursor: 'pointer' }}
