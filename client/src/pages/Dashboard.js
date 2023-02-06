@@ -54,10 +54,6 @@ export default function Dashboard() {
     }
   }
 
-  // const [ monsterName, setMonsterName] = useState("My Monster");
-
-  // const [ updateMonster, { updateError } ] = useMutation(UPDATE_MONSTER);
-
   const newMonster = (monster) => {
     switch (monster) {
       case "wavy":
@@ -86,19 +82,6 @@ export default function Dashboard() {
   if (loading) {
     return <div>Loading</div>;
   }
-
-  // Update the name by clicking the card header
-
-  // const [fullName, setFullName] = useState("My Monster");
-
-  // const handleInputChange = (e) => {
-  //   const { target } = e;
-  //   const inputType = target.name;
-  //   const inputValue = target.value;
-
-  //   if (inputType === "fullName") {
-  //     setFullName(inputValue);
-  //   }
 
   const editName = (event, monsterId) => {
     // var text = this.innerHTML;
