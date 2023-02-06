@@ -4,7 +4,7 @@
 
 ## Description
 
-A fun interactive pet monster that will keep you company and that you can take care of. Having a monster to care for can give you a sense of responsibility and belonging. Can bring a feeling of nostalgia to some and a fun new companion for children. 
+A fun interactive pet monster that will keep you company during your computer browsing sessions. Feed it, dance with it, and put it to sleep!
 
 
 ## Table of Contents
@@ -24,7 +24,7 @@ npm run i
 Screenshot: ![Demo screenshot](./client/src/pages/assets/monster-dashboard-snippet.PNG)
 
 Live Deployment:
-https://vast-inlet-40115.herokuapp.com/
+
 
 ## Credits
 
