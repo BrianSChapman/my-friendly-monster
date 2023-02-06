@@ -61,7 +61,7 @@ footer {
 /* Login Page */
 #footer-text {
   font-size:larger;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 #login-box {
   background-color: var(--lightblue) !important;

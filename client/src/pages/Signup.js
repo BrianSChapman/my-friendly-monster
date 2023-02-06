@@ -32,6 +32,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      window.location.pathname("/dashboard");
     } catch (e) {
       console.error(e);
     }
