@@ -45,4 +45,4 @@ To contribute to our application, please reach out to us via email at Antcedrone
 Githin Profile links: https://github.com/antced, https://github.com/BrianSChapman, https://github.com/ColinDeery, https://github.com/LayneNi
 
 
-For any additional questions please reach out to us via email at Antcedrone952gmail.com, Chapman.brian86@gmail.com, Colinbdeery@gmail.com, Laynenigro@gmail.com.
+For any additional questions please reach out to us via email at Antcedrone95gmail.com, Chapman.brian86@gmail.com, Colinbdeery@gmail.com, Laynenigro@gmail.com
