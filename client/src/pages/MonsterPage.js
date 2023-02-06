@@ -128,16 +128,39 @@ export default function MonsterPage() {
     clearTimeout();
   };
 
+  const sleepToggle = (event) => {
+    console.log(event.target.innerHTML)
+    if (event.target.innerHTML === `TIME FOR BED &#128564;`) {
+      event.target.innerHTML === `WAKE UP! &#128564;`;
+      return false;
+    } else if (event.target.innerHTML === `WAKE UP! &#128564;`) {
+      event.target.innerHTML === `TIME FOR BED &#128564;`;
+      return true;
+    } else {
+      console.log("something went wrong")
+    }
+    return console.log("something went wrong")
+  }
+
   return (
     <div>
       <section className="container pt-5">
         <div className="row">
           <div className="col-lg-9 col-sm-12 image-column">
-            <img
+            {sleepToggle ? <img
               src={`${newMonster()}`}
               alt="monster pixel art"
               className="monster-page-image"
-            />
+            /> : <img
+            src={`${newMonster()}`}
+            alt="monster pixel art sleep"
+            className="monster-page-image"
+          /> }
+            {/* <img
+            //   src={`${newMonster()}`}
+            //   alt="monster pixel art"
+            //   className="monster-page-image"
+            // /> */}
             {foodTime && (<img id="burger-rain" src={burger} alt="Raining Burgers"></img>)}
             {danceBreak && (
               <img id="disco-ball" src={disco} alt="Disco Ball">
@@ -158,7 +181,7 @@ export default function MonsterPage() {
                 {" "}
                 LET'S DANCE!!! &#128131;
               </button>
-              <button className="mon-btns">TIME FOR BED &#128564;</button>
+              <button className="mon-btns" onClick={(event) => {sleepToggle(event)}}>{TIME FOR BED &#128564;}</button>
               <div className="d-grid">
                 <Link to="/dashboard">
                   <button
