@@ -124,11 +124,15 @@ export default function MonsterPage() {
   const sound = () => {
     let audio = new Audio(chomp);
     audio.play();
+    newMonster();
+
   };
 
   const [foodTime, setFoodTime] = useState(false);
 
   const handleFoodBtn = () => {
+    setSleeping(false);
+    document.getElementById("sleepBtn").innerHTML = `TIME FOR BED &#128564;`
     setFoodTime(true);
     sound();
 
@@ -145,11 +149,14 @@ export default function MonsterPage() {
   const danceSound = () => {
     let audio = new Audio(dance);
     audio.play();
+    newMonster();
   };
 
   const [danceBreak, setDanceBreak] = useState(false);
 
   const handleDanceBtn = () => {
+    setSleeping(false);
+    document.getElementById("sleepBtn").innerHTML = `TIME FOR BED &#128564;`
     setDanceBreak(true);
     danceSound();
 
@@ -213,7 +220,7 @@ export default function MonsterPage() {
                 {" "}
                 LET'S DANCE!!! &#128131;
               </button>
-              <button className="mon-btns" onClick={(event) => {sleepToggle(event)}}>TIME FOR BED &#128564;</button>
+              <button className="mon-btns" id="sleepBtn" onClick={(event) => {sleepToggle(event)}}>TIME FOR BED &#128564;</button>
               <div className="d-grid">
                 <Link to="/dashboard">
                   <button
