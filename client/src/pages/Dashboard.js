@@ -54,10 +54,6 @@ export default function Dashboard() {
     }
   }
 
-  // const [ monsterName, setMonsterName] = useState("My Monster");
-
-  // const [ updateMonster, { updateError } ] = useMutation(UPDATE_MONSTER);
-
   const newMonster = (monster) => {
     switch (monster) {
       case "wavy":
@@ -87,19 +83,6 @@ export default function Dashboard() {
     return <div>Loading</div>;
   }
 
-  // Update the name by clicking the card header
-
-  // const [fullName, setFullName] = useState("My Monster");
-
-  // const handleInputChange = (e) => {
-  //   const { target } = e;
-  //   const inputType = target.name;
-  //   const inputValue = target.value;
-
-  //   if (inputType === "fullName") {
-  //     setFullName(inputValue);
-  //   }
-
   const editName = (event, monsterId) => {
     // var text = this.innerHTML;
     var editableText = event.target
@@ -113,7 +96,7 @@ export default function Dashboard() {
   return (
     <div>
       <h1 id="greeting">Click a monster to say hi!</h1>
-      <div className="container-fluid d-flex p-5 flex-wrap mt-6">
+      <div className="container-fluid d-flex p-5 flex-wrap mt-6" id="monster-card" >
         {monsters.map((monster) => (
           <div key={monster._id} className="card me-3 mb-4 p-2 border-0">
             <h4 className="card-header text-white text-center p-2 m-0">
