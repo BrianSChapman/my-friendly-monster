@@ -34,6 +34,10 @@ a,
   text-align: center;
   font-size: 300%;
 }
+
+#monster-card{
+ margin-bottom: 5%;
+}
 /* Logout hidden until user is logged in */
 /* .hidden {
   visibility: hidden;
