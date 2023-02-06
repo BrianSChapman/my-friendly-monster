@@ -4,7 +4,7 @@
 
 ## Description
 
-Friendly monsters to make you feel happy XD!
+A fun interactive pet monster that will keep you company and that you can take care of. Having a monster to care for can give you a sense of responsibility and belonging. Can bring a feeling of nostalgia to some and a fun new companion for children. 
 
 
 ## Table of Contents
