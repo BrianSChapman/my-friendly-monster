@@ -17,7 +17,7 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.loggedIn(token);
-      window.location.pathname("/dashboard");
+      navigate("/dashboard");
     } catch (e) {
       console.log(e);
     }
