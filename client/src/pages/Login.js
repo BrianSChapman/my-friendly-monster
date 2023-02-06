@@ -8,7 +8,7 @@ import beety from './assets/beety.gif';
 function Login(props) {
   const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -17,7 +17,7 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.loggedIn(token);
-      window.location.pathname("/dashboard");
+      navigate("/dashboard");
     } catch (e) {
       console.log(e);
     }
