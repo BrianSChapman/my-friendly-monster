@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0405c694.chunk.css",
+    "main.js": "/static/js/main.80c55b02.chunk.js",
+    "main.js.map": "/static/js/main.80c55b02.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a3f23f03.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a3f23f03.js.map",
+    "static/js/2.d4e03db5.chunk.js": "/static/js/2.d4e03db5.chunk.js",
+    "static/js/2.d4e03db5.chunk.js.map": "/static/js/2.d4e03db5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0405c694.chunk.css.map": "/static/css/main.0405c694.chunk.css.map",
+    "static/js/2.d4e03db5.chunk.js.LICENSE.txt": "/static/js/2.d4e03db5.chunk.js.LICENSE.txt",
+    "static/media/BeetySleep.4d4e1dbb.gif": "/static/media/BeetySleep.4d4e1dbb.gif",
+    "static/media/BenSleep.5854af0a.gif": "/static/media/BenSleep.5854af0a.gif",
+    "static/media/FrowerSleep.92a71a6b.gif": "/static/media/FrowerSleep.92a71a6b.gif",
+    "static/media/IceabellaSleep.b57bb48e.gif": "/static/media/IceabellaSleep.b57bb48e.gif",
+    "static/media/Jungle.aed2b331.jpg": "/static/media/Jungle.aed2b331.jpg",
+    "static/media/Safari.fca3752a.jpg": "/static/media/Safari.fca3752a.jpg",
+    "static/media/VolmaSleep.7a258b7e.gif": "/static/media/VolmaSleep.7a258b7e.gif",
+    "static/media/WavySleep.4654eba0.gif": "/static/media/WavySleep.4654eba0.gif",
+    "static/media/index.css": "/static/media/background.64588bf9.jpg",
+    "static/media/beachy.20a63c81.jpg": "/static/media/beachy.20a63c81.jpg",
+    "static/media/beety.c2fe1a4a.gif": "/static/media/beety.c2fe1a4a.gif",
+    "static/media/ben.e93ead51.gif": "/static/media/ben.e93ead51.gif",
+    "static/media/burgerRain.f5bf7328.gif": "/static/media/burgerRain.f5bf7328.gif",
+    "static/media/chomp.b7d7d680.mp3": "/static/media/chomp.b7d7d680.mp3",
+    "static/media/dance.b7822fd3.mp3": "/static/media/dance.b7822fd3.mp3",
+    "static/media/discoBall.9ddda4bd.gif": "/static/media/discoBall.9ddda4bd.gif",
+    "static/media/frower.635a3a53.gif": "/static/media/frower.635a3a53.gif",
+    "static/media/iceabella.eacd4b14.gif": "/static/media/iceabella.eacd4b14.gif",
+    "static/media/volma.e0adca2e.gif": "/static/media/volma.e0adca2e.gif",
+    "static/media/wavy.f4df02a5.gif": "/static/media/wavy.f4df02a5.gif",
+    "static/media/zh3j4qF.9dfa4de1.gif": "/static/media/zh3j4qF.9dfa4de1.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3f23f03.js",
+    "static/js/2.d4e03db5.chunk.js",
+    "static/css/main.0405c694.chunk.css",
+    "static/js/main.80c55b02.chunk.js"
+  ]
+}
