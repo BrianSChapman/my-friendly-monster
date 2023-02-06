@@ -18,8 +18,16 @@ import volma from "./assets/volma.gif";
 import wavy from "./assets/wavy.gif";
 import disco from "./assets/discoBall.gif";
 import burger from "./assets/burgerRain.gif"
+import beetysleep from "./assets/BeetySleep.gif"
+import bensleep from "./assets/BenSleep.gif"
+import frowersleep from "./assets/FrowerSleep.gif"
+import iceabellasleep from "./assets/IceabellaSleep.gif"
+import volmasleep from "./assets/VolmaSleep.gif"
+import wavysleep from "./assets/WavySleep.gif"
 
 export default function MonsterPage() {
+  const [sleeping, setSleeping] = useState(false);
+  var sleepText = `TIME FOR BED &#128564;`;
   const tokenTest = Auth.getProfile();
   const userId = tokenTest.data._id;
   const { loading, error, data } = useQuery(QUERY_SINGLE_USER, {
@@ -64,22 +72,46 @@ export default function MonsterPage() {
       if (monster._id === monsterId) {
         switch (monster.imageUrl) {
           case "wavy":
+            if (sleeping === false) {
             return wavy;
+            } else {
+              return wavysleep;
+            }
             break;
           case "beety":
-            return beety;
+            if (sleeping === false) {
+              return beety;
+              } else {
+                return beetysleep;
+              }
             break;
           case "volma":
-            return volma;
+            if (sleeping === false) {
+              return volma;
+              } else {
+                return volmasleep;
+              }
             break;
           case "ben":
-            return ben;
+            if (sleeping === false) {
+              return ben;
+              } else {
+                return bensleep;
+              }
             break;
           case "iceabella":
-            return iceabella;
+            if (sleeping === false) {
+              return iceabella;
+              } else {
+                return iceabellasleep;
+              }
             break;
           case "frower":
-            return frower;
+            if (sleeping === false) {
+              return frower;
+              } else {
+                return frowersleep;
+              }
             break;
           default:
             return ben;
@@ -92,11 +124,15 @@ export default function MonsterPage() {
   const sound = () => {
     let audio = new Audio(chomp);
     audio.play();
+    newMonster();
+
   };
 
   const [foodTime, setFoodTime] = useState(false);
 
   const handleFoodBtn = () => {
+    setSleeping(false);
+    document.getElementById("sleepBtn").innerHTML = `TIME FOR BED &#128564;`
     setFoodTime(true);
     sound();
 
@@ -113,20 +149,41 @@ export default function MonsterPage() {
   const danceSound = () => {
     let audio = new Audio(dance);
     audio.play();
+    newMonster();
   };
 
   const [danceBreak, setDanceBreak] = useState(false);
 
   const handleDanceBtn = () => {
+    setSleeping(false);
+    document.getElementById("sleepBtn").innerHTML = `TIME FOR BED &#128564;`
     setDanceBreak(true);
     danceSound();
 
     setTimeout(() => {
       setDanceBreak(false);
-    }, 21000);
+    }, 12000);
 
     clearTimeout();
   };
+
+  const sleepToggle = (event) => {
+    console.log(event.target.innerHTML)
+    if (!sleeping) {
+      event.target.innerHTML = `WAKE UP! &#x23F0;`
+      sleepText = `WAKE UP!`
+      setSleeping(!sleeping);
+      newMonster();
+    } else if (sleeping) {
+      event.target.innerHTML = `TIME FOR BED &#128564;`
+      sleepText = `TIME FOR BED &#128564;`
+      setSleeping(!sleeping);
+      newMonster();
+    } else {
+      console.log("something went wrong");
+    }
+    return "something went wrong";
+  }
 
   return (
     <div>
@@ -136,9 +193,14 @@ export default function MonsterPage() {
             <img
               src={`${newMonster()}`}
               alt="monster pixel art"
-              className="monster-page-image img-fluid"
+              className="monster-page-image"
             />
-            {foodTime && (<img id="burger-rain" className="img-fluid" src={burger} alt="Raining Burgers"></img>)}
+            {/* <img
+            //   src={`${newMonster()}`}
+            //   alt="monster pixel art"
+            //   className="monster-page-image"
+            // /> */}
+            {foodTime && (<img id="burger-rain" src={burger} alt="Raining Burgers"></img>)}
             {danceBreak && (
               <img id="disco-ball" className="img-fluid" src={disco} alt="Disco Ball">
               </img>
@@ -158,7 +220,7 @@ export default function MonsterPage() {
                 {" "}
                 LET'S DANCE!!! &#128131;
               </button>
-              <button className="mon-btns">TIME FOR BED &#128564;</button>
+              <button className="mon-btns" id="sleepBtn" onClick={(event) => {sleepToggle(event)}}>TIME FOR BED &#128564;</button>
               <div className="d-grid">
                 <Link to="/dashboard">
                   <button
