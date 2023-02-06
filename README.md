@@ -1,4 +1,4 @@
-# My friendly monster
+# My Friendly Monster
 
 ![badge](https://img.shields.io/badge/License-MIT-blue)
 
