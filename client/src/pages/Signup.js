@@ -36,8 +36,7 @@ const Signup = () => {
       console.error(e);
     }
   };
-
-  //    Need to Style this part 
+ 
   return (
 
     <div className='login-screen justify-content-center d-flex flex-column' >
