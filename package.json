@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
-  "engines": {
-    "node": "16.16.0",
-    "npm": "8.11.0"
-},
+"engines": {
+    "node": "16.19.0",
+    "npm": "8.19.3"
+  },
   "scripts": {
     "start": "node server --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
