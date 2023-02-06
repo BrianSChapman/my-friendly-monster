@@ -155,7 +155,7 @@ export default function MonsterPage() {
 
     setTimeout(() => {
       setDanceBreak(false);
-    }, 21000);
+    }, 12000);
 
     clearTimeout();
   };
