@@ -2,9 +2,9 @@ import React, { usetState } from "react";
 import Auth from "../utils/auth";
 
 export default function Header() {
-  const hideLogout = window.location === "/" || "/signup";
+  const hideLogout = window.location.pathname === "/" || "/signup";
 
-  return hideLogout ? (
+  return window.location.pathname === "/" ? (
     <nav className="navbar navbar-expand-lg shadow-lg">
       <div className="container-fluid">
         <h1 className="title text-center">My Friendly Monster</h1>

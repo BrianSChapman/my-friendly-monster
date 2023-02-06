@@ -142,7 +142,7 @@ height: fit-content;
 .login-screen, .signup-screen {
   align-items: center;
   padding-top: 15px;
-
+  padding-bottom: 100px;
 }
 
 .login-image {
@@ -159,9 +159,6 @@ height: fit-content;
 .signup-btn {
   margin-top: 10px;
 }
-
-
-
 
 /* Dashboard */
 #greeting {
@@ -199,6 +196,17 @@ height: fit-content;
   color: #7209B7;
   border: 2px #7209B7 solid;
 }
+
+.rehomeBtn:hover{
+  background-color: #ad85c4;
+  color: #7209B7;
+}
+
+.rehomeBtn:active{
+  background-color: #a564ca;
+  color: #ead3eb;
+}
+
 .newHeader {
   padding-left: 15px !important;
 }
@@ -279,6 +287,16 @@ height: fit-content;
   background-color: rgb(223, 156, 213);
   font-size:x-large;
 }
+
+
+.mon-btns:hover {
+  background-color: rgb(224, 93, 205);
+}
+
+.mon-btns:active {
+  background-color: rgb(179, 7, 153);
+}
+
 
 /* back button on MonsterPage */
 .back-btn {
