@@ -43,11 +43,11 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/eggpage" element={<EggPage />} />
             <Route path="/monsterpage/:monsterId" element={<MonsterPage />} />
+            <Route path="/" element={<Login />} />
           </Routes>
         </div>
       </Router>
