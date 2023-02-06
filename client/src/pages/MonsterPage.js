@@ -136,17 +136,17 @@ export default function MonsterPage() {
             <img
               src={`${newMonster()}`}
               alt="monster pixel art"
-              className="monster-page-image"
+              className="monster-page-image img-fluid"
             />
-            {foodTime && (<img id="burger-rain" src={burger} alt="Raining Burgers"></img>)}
+            {foodTime && (<img id="burger-rain" className="img-fluid" src={burger} alt="Raining Burgers"></img>)}
             {danceBreak && (
-              <img id="disco-ball" src={disco} alt="Disco Ball">
+              <img id="disco-ball" className="img-fluid" src={disco} alt="Disco Ball">
               </img>
             )}
             <img
               src={`${getBiome()}`}
               alt="biome background"
-              className="biome"
+              className="biome img-fluid"
             />
           </div>
           <div className="col-lg-3 col-sm-12">
