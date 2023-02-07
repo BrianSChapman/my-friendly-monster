@@ -23,7 +23,7 @@ npm run i
 
 Screenshot: ![Demo screenshot](./client/src/pages/assets/monster-dashboard-snippet.PNG)
 
-Live Deployment:
+Live Deployment: https://myfriendlymonster.herokuapp.com
 
 
 ## Credits
