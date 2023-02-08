@@ -28,7 +28,11 @@ https://vast-inlet-40115.herokuapp.com/
 
 ## Credits
 
-Contributors: Anthony Cedrone, Brian Chapman, Colin Deery, Layne Nigro
+Contributors: 
+- Anthony Cedrone - Concept, original artwork and animation, UI styling, front-end functionality, back-end functionality
+- Brian Chapman - Color palette, UI styling,  front-end functionality, back-end functionality, database models
+- Colin Deery - UI styling, component building, front-end functionality
+- Layne Nigro - Front- end functionality, back-end functionality, UI styling 
 
 ## License
 This project is licensed under the MIT license. https://choosealicense.com/licenses/mit/
