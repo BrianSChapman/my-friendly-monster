@@ -24,7 +24,7 @@ npm run i
 Screenshot: ![Demo screenshot](./client/src/pages/assets/monster-dashboard-snippet.PNG)
 
 Live Deployment:
-https://vast-inlet-40115.herokuapp.com/
+https://radiant-garden-89222.herokuapp.com/
 
 ## Credits
 
