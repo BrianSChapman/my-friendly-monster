@@ -1,4 +1,5 @@
 import React, { usetState } from "react";
+import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
 export default function Header() {
@@ -22,7 +23,7 @@ export default function Header() {
           <li className="nav-item">
             <button
               className="nav-link logout-link hidden"
-              href="#"
+              href="/login"
               onClick={Auth.logout}
             >
               Logout

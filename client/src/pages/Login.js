@@ -9,6 +9,7 @@ function Login(props) {
   const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
   const navigate = useNavigate();
+  
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -16,12 +17,13 @@ function Login(props) {
         variables: { username: formState.username, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.loggedIn(token);
+      Auth.login(token);
       navigate("/dashboard");
     } catch (e) {
       console.log(e);
     }
   };
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({

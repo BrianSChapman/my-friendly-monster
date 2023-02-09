@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, redirect } from 'react-router-dom';
+import { Link, redirect, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import ben from './assets/ben.gif';
@@ -11,7 +11,7 @@ const Signup = () => {
     password: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -31,7 +31,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
-      // redirect("/dashboard");
+      navigate("/dashboard");
 
     } catch (e) {
       console.error(e);

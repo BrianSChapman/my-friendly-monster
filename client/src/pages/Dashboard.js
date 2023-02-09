@@ -43,14 +43,13 @@ export default function Dashboard() {
 
   const UpdateMonster = (fullName, monsterId) => {
     try {
-      console.log(`this is new fullName: ${fullName}`)
       updateMonster({
         variables: {
           fullName: fullName,
           monsterId: monsterId,
         },
       });
-      window.location.reload();
+      // window.location.reload();
     } catch (updateError) {
       console.log(updateError);
     }
@@ -88,9 +87,7 @@ export default function Dashboard() {
   const editName = (event, monsterId) => {
     // var text = this.innerHTML;
     var editableText = event.target
-    console.log(editableText);
             editableText = editableText.innerHTML.replace(/&/g, "&amp").replace(/</g, "&lt;");
-            console.log("must've worked");
             UpdateMonster(editableText, monsterId );
 
   };

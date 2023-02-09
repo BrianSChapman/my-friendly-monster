@@ -17,7 +17,7 @@ const EggPage = () => {
     'beety',
 ];
   const randomMonster = monsterArray[Math.floor(monsterArray.length * Math.random())];
-  const [nameState, setNameState] = useState("My Monster");
+  const [nameState, setNameState] = useState("My Monster ");
   console.log(nameState);
   const [imgState, setImgState] = useState(randomMonster);
     console.log(imgState);
@@ -43,7 +43,7 @@ const EggPage = () => {
     <h1 id="greeting">Hatch the egg!</h1>
     <section className="container-fluid d-flex justify-content-center">
       {/* <Link to="/dashboard"> */}
-      <Link to ="/dashboard">
+      <Link to ="/dashboard" onClick={() => window.location.href="/dashboard"}>
       <button onClick={AddMonster}
       className="eggBtn">
         <img src={egg} alt="Egg Pixel Art" className="eggImg"/>
