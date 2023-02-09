@@ -1,5 +1,7 @@
 import decode from 'jwt-decode';
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
+
+
 
 class AuthService {
   getProfile() {
@@ -35,7 +37,7 @@ class AuthService {
 
   logout() {
     localStorage.removeItem('id_token');
-    redirect('/');
+    window.location.href="/"
   }
 }
 

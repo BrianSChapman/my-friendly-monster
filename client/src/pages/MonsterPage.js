@@ -222,7 +222,7 @@ export default function MonsterPage() {
               </button>
               <button className="mon-btns" id="sleepBtn" onClick={(event) => {sleepToggle(event)}}>TIME FOR BED &#128564;</button>
               <div className="d-grid">
-                <Link to="/dashboard">
+                <Link to="/dashboard" onClick={() => window.location.href="/dashboard"}>
                   <button
                     className="btn back-btn btn-lg"
                     style={{ cursor: "pointer" }}
