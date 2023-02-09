@@ -6,7 +6,7 @@ export default function Header() {
   // const hideLogout = window.location.pathname === "/" || "/signup";
 
   return (
-  window.location.pathname === "/" || "/signup" ? (
+  (window.location.pathname === "/" || "/signup") ? (
     <nav className="navbar navbar-expand-lg shadow-lg">
       <div className="container-fluid">
         <h1 className="title text-center">My Friendly Monster</h1>
